@@ -177,6 +177,9 @@
     <Compile Include="Database\Entity\PERSONELLER.cs" />
     <Compile Include="Database\Entity\TAHLIL.cs" />
     <Compile Include="Database\Model\Hastalar.cs" />
+    <Compile Include="Database\Model\Kullanicilar.cs" />
+    <Compile Include="Database\Model\Personeller.cs" />
+    <Compile Include="Database\Model\Yetkiler.cs" />
     <Compile Include="HastaErişimiBulunan\HastaAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>

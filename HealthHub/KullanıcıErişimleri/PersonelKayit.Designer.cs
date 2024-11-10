@@ -68,6 +68,7 @@
             this.kayit.TabIndex = 2;
             this.kayit.Text = "KAYIT";
             this.kayit.UseVisualStyleBackColor = true;
+            this.kayit.Click += new System.EventHandler(this.kayit_Click);
             // 
             // Vazgec
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PersonelKayit";
             this.Text = "PersonelKayit";
+            this.Load += new System.EventHandler(this.PersonelKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
