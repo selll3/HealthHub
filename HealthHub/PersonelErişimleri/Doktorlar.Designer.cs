@@ -41,6 +41,7 @@
             this.Vazgec.TabIndex = 10;
             this.Vazgec.Text = "VAZGEÇ";
             this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
             // Doktor
             // 

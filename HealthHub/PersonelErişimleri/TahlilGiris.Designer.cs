@@ -42,16 +42,16 @@
             this.Kaydet = new System.Windows.Forms.Button();
             this.TahlilGirisleri = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mvcTB = new System.Windows.Forms.Label();
-            this.mchTB = new System.Windows.Forms.Label();
-            this.mchcTB = new System.Windows.Forms.Label();
-            this.pltTB = new System.Windows.Forms.Label();
-            this.rdwTB = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rdwTB = new System.Windows.Forms.Label();
+            this.pltTB = new System.Windows.Forms.Label();
+            this.mchcTB = new System.Windows.Forms.Label();
+            this.mchTB = new System.Windows.Forms.Label();
+            this.mvcTB = new System.Windows.Forms.Label();
             this.TahlilGirisleri.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "VAZGEÇ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // wbcTB
             // 
@@ -190,41 +191,40 @@
             this.panel1.Size = new System.Drawing.Size(233, 423);
             this.panel1.TabIndex = 0;
             // 
-            // mvcTB
+            // textBox5
             // 
-            this.mvcTB.AutoSize = true;
-            this.mvcTB.Location = new System.Drawing.Point(20, 207);
-            this.mvcTB.Name = "mvcTB";
-            this.mvcTB.Size = new System.Drawing.Size(36, 13);
-            this.mvcTB.TabIndex = 36;
-            this.mvcTB.Text = "MCV :";
+            this.textBox5.Location = new System.Drawing.Point(96, 385);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(77, 20);
+            this.textBox5.TabIndex = 45;
             // 
-            // mchTB
+            // textBox4
             // 
-            this.mchTB.AutoSize = true;
-            this.mchTB.Location = new System.Drawing.Point(20, 253);
-            this.mchTB.Name = "mchTB";
-            this.mchTB.Size = new System.Drawing.Size(37, 13);
-            this.mchTB.TabIndex = 37;
-            this.mchTB.Text = "MCH :";
+            this.textBox4.Location = new System.Drawing.Point(96, 339);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(77, 20);
+            this.textBox4.TabIndex = 44;
             // 
-            // mchcTB
+            // textBox3
             // 
-            this.mchcTB.AutoSize = true;
-            this.mchcTB.Location = new System.Drawing.Point(20, 304);
-            this.mchcTB.Name = "mchcTB";
-            this.mchcTB.Size = new System.Drawing.Size(44, 13);
-            this.mchcTB.TabIndex = 38;
-            this.mchcTB.Text = "MCHC :";
+            this.textBox3.Location = new System.Drawing.Point(96, 297);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(77, 20);
+            this.textBox3.TabIndex = 43;
             // 
-            // pltTB
+            // textBox2
             // 
-            this.pltTB.AutoSize = true;
-            this.pltTB.Location = new System.Drawing.Point(20, 346);
-            this.pltTB.Name = "pltTB";
-            this.pltTB.Size = new System.Drawing.Size(33, 13);
-            this.pltTB.TabIndex = 39;
-            this.pltTB.Text = "PLT :";
+            this.textBox2.Location = new System.Drawing.Point(96, 246);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(77, 20);
+            this.textBox2.TabIndex = 42;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(96, 200);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(77, 20);
+            this.textBox1.TabIndex = 41;
             // 
             // rdwTB
             // 
@@ -235,40 +235,41 @@
             this.rdwTB.TabIndex = 40;
             this.rdwTB.Text = "RDW :";
             // 
-            // textBox1
+            // pltTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 20);
-            this.textBox1.TabIndex = 41;
+            this.pltTB.AutoSize = true;
+            this.pltTB.Location = new System.Drawing.Point(20, 346);
+            this.pltTB.Name = "pltTB";
+            this.pltTB.Size = new System.Drawing.Size(33, 13);
+            this.pltTB.TabIndex = 39;
+            this.pltTB.Text = "PLT :";
             // 
-            // textBox2
+            // mchcTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 246);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(77, 20);
-            this.textBox2.TabIndex = 42;
+            this.mchcTB.AutoSize = true;
+            this.mchcTB.Location = new System.Drawing.Point(20, 304);
+            this.mchcTB.Name = "mchcTB";
+            this.mchcTB.Size = new System.Drawing.Size(44, 13);
+            this.mchcTB.TabIndex = 38;
+            this.mchcTB.Text = "MCHC :";
             // 
-            // textBox3
+            // mchTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(96, 297);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(77, 20);
-            this.textBox3.TabIndex = 43;
+            this.mchTB.AutoSize = true;
+            this.mchTB.Location = new System.Drawing.Point(20, 253);
+            this.mchTB.Name = "mchTB";
+            this.mchTB.Size = new System.Drawing.Size(37, 13);
+            this.mchTB.TabIndex = 37;
+            this.mchTB.Text = "MCH :";
             // 
-            // textBox4
+            // mvcTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(96, 339);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(77, 20);
-            this.textBox4.TabIndex = 44;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(96, 385);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(77, 20);
-            this.textBox5.TabIndex = 45;
+            this.mvcTB.AutoSize = true;
+            this.mvcTB.Location = new System.Drawing.Point(20, 207);
+            this.mvcTB.Name = "mvcTB";
+            this.mvcTB.Size = new System.Drawing.Size(36, 13);
+            this.mvcTB.TabIndex = 36;
+            this.mvcTB.Text = "MCV :";
             // 
             // TahlilGiris
             // 

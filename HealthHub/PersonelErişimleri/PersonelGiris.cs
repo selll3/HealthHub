@@ -9,9 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data.Entity;
-
-
+//using System.Data.Entity.Database.Entity;
+using HealthHub.Database.Entity;
 
 
 
@@ -30,7 +29,7 @@ namespace HealthHub.PersonelErişimleri
             string parola = Parola.Text;
 
             // LINQ kullanarak veritabanında kullanıcı sorgulama
-            var kullanici = HealthHub.Database.Entity.KULLANICILAR
+            var kullanici = hb.KULLANICILAR
                 .Where(g => g.KullaniciAdi.Equals(kullaniciAdi, StringComparison.OrdinalIgnoreCase) &&
                             g.Parola.Equals(parola))
                 .FirstOrDefault();
@@ -56,6 +55,20 @@ namespace HealthHub.PersonelErişimleri
         private void PersonelGiris_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = string.Empty;
+                }
+            }
+
+            // Formu kapat
+            this.Close();
         }
     }
 }

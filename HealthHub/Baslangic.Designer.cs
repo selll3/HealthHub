@@ -50,6 +50,7 @@
             this.PersonelGiris.TabIndex = 1;
             this.PersonelGiris.Text = "Personel Giriş";
             this.PersonelGiris.UseVisualStyleBackColor = true;
+            this.PersonelGiris.Click += new System.EventHandler(this.PersonelGiris_Click);
             // 
             // Baslangic
             // 

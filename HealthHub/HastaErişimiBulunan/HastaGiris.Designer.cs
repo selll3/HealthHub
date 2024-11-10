@@ -45,6 +45,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "GİRİŞ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -87,6 +88,7 @@
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Henüz kayıtlı değil misiniz?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Vazgec
             // 
@@ -96,6 +98,7 @@
             this.Vazgec.TabIndex = 8;
             this.Vazgec.Text = "VAZGEÇ";
             this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
             // HastaGiris
             // 
@@ -112,6 +115,7 @@
             this.Controls.Add(this.button1);
             this.Name = "HastaGiris";
             this.Text = "HastaGiris";
+            this.Load += new System.EventHandler(this.HastaGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

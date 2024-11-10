@@ -1,6 +1,6 @@
-﻿namespace HealthHub.PersonelErişimleri
+﻿namespace HealthHub.KullanıcıErişimleri
 {
-    partial class Hastalar
+    partial class TumKullanicilar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,39 @@
         private void InitializeComponent()
         {
             this.Vazgec = new System.Windows.Forms.Button();
-            this.Hasta = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.Hasta)).BeginInit();
+            this.TumKullancilar = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.TumKullancilar)).BeginInit();
             this.SuspendLayout();
             // 
             // Vazgec
             // 
-            this.Vazgec.Location = new System.Drawing.Point(12, 355);
+            this.Vazgec.Location = new System.Drawing.Point(12, 255);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 22);
-            this.Vazgec.TabIndex = 9;
+            this.Vazgec.TabIndex = 10;
             this.Vazgec.Text = "VAZGEÇ";
             this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
-            // Hasta
+            // TumKullancilar
             // 
-            this.Hasta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Hasta.Location = new System.Drawing.Point(12, 12);
-            this.Hasta.Name = "Hasta";
-            this.Hasta.Size = new System.Drawing.Size(370, 307);
-            this.Hasta.TabIndex = 10;
+            this.TumKullancilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TumKullancilar.Location = new System.Drawing.Point(12, 12);
+            this.TumKullancilar.Name = "TumKullancilar";
+            this.TumKullancilar.Size = new System.Drawing.Size(292, 213);
+            this.TumKullancilar.TabIndex = 11;
             // 
-            // Hastalar
+            // TümKullanicilar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 390);
+            this.ClientSize = new System.Drawing.Size(316, 288);
             this.ControlBox = false;
-            this.Controls.Add(this.Hasta);
+            this.Controls.Add(this.TumKullancilar);
             this.Controls.Add(this.Vazgec);
-            this.Name = "Hastalar";
-            this.Text = "Hastalar";
-            ((System.ComponentModel.ISupportInitialize)(this.Hasta)).EndInit();
+            this.Name = "TümKullanicilar";
+            this.Text = "TümKullanicilar";
+            ((System.ComponentModel.ISupportInitialize)(this.TumKullancilar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,6 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button Vazgec;
-        private System.Windows.Forms.DataGridView Hasta;
+        private System.Windows.Forms.DataGridView TumKullancilar;
     }
 }

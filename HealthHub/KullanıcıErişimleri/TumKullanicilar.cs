@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HealthHub
+namespace HealthHub.KullanıcıErişimleri
 {
-    public partial class MuayeneEkle : Form
+    public partial class TumKullanicilar : Form
     {
-        public MuayeneEkle()
+        public TumKullanicilar()
         {
             InitializeComponent();
-        }
-
-        private void MuayeneEkle_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Vazgec_Click(object sender, EventArgs e)

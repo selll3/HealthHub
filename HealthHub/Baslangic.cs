@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthHub.PersonelErişimleri;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace HealthHub
         {
             HastaGiris hg = new HastaGiris();
             hg.Show();
+        }
+
+        private void PersonelGiris_Click(object sender, EventArgs e)
+        {
+            PersonelGiris personel = new PersonelGiris();
+            personel.Show();
         }
     }
 }

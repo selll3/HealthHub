@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
+
 namespace HealthHub.Database.Entity
 {
     public partial class HealthHubDb : DbContext

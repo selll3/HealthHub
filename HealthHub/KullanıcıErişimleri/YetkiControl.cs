@@ -16,5 +16,19 @@ namespace HealthHub.KullanıcıErişimleri
         {
             InitializeComponent();
         }
+
+        private void Vazgec_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = string.Empty;
+                }
+            }
+
+            // Formu kapat
+            this.Close();
+        }
     }
 }
