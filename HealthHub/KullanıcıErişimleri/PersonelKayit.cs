@@ -1,4 +1,5 @@
 ﻿using HealthHub.Database.Entity;
+using HealthHub.KullanıcıErişimleri;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace HealthHub
         {
             foreach (Control control in this.Controls)
             {
-                if (control is TextBox)
+                if (control is System.Windows.Forms.TextBox)
                 {
                     control.Text = string.Empty;
                 }
@@ -35,7 +36,7 @@ namespace HealthHub
 
         private void PersonelKayit_Load(object sender, EventArgs e)
         {
-
+            FillComboSeachCode();
         }
 
         private void kayit_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace HealthHub
             bool isAnyEmpty = false;
             foreach (Control control in this.Controls)
             {
-                if (control is TextBox && string.IsNullOrWhiteSpace(control.Text))
+                if (control is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(control.Text))
                 {
                     isAnyEmpty = true;
                     break;
@@ -71,24 +72,24 @@ namespace HealthHub
                 // Yeni personel ekleme
                 PERSONELLER yP = new PERSONELLER
                 {
-                    Ad = _PersonelAdi_textBox.Text,
-                    Soyad = _PersonelSoyadi_textBox.Text,
-                    PersonelGörevi = comboBox1.SelectedItem.ToString(),
+                    Ad = _PersonelAdi.Text,
+                    Soyad = _PersonelSoyadi.Text,
+                    PersonelGörevi = PersonelGorev.SelectedItem.ToString(),
 
                     KULLANICIID = kullaniciId
                 };
 
                 // Önce PERSONEL kaydını ekle
-                context.PERSONEL.Add(yP);
+                context.PERSONELLER.Add(yP);
                 context.SaveChanges(); // SaveChanges çağrısı yaparak veritabanına ekleyin
 
                 // PERSONELID değerini aldıktan sonra doktor ekleme
                 int personelID = yP.PERSONELID;
 
                 // Eğer personel doktor ise doktorlar tablosuna da ekle
-                if (comboBox1.SelectedItem.ToString() == "Doktor")
+                if (PersonelGorev.SelectedItem.ToString() == "Doktor")
                 {
-                    AddDoctor(personelID, _PersonelAdi_textBox.Text, _PersonelSoyadi_textBox.Text);
+                    AddDoctor(personelID, _PersonelAdi.Text, _PersonelSoyadi.Text);
                 }
 
                 MessageBox.Show("Personel başarıyla eklendi.");
@@ -102,6 +103,72 @@ namespace HealthHub
 
                 this.Close();
             }
+
         }
+        private void AddDoctor(int personelID, string doktorAdi, string doktorSoyadi)
+        {
+            using (var context = new HealthHubDb())
+            {
+                // Geçerli bir PERSONELID kontrolü
+                if (personelID <= 0)
+                {
+                    MessageBox.Show("Geçerli bir PERSONELID değeri yok.");
+                    return;
+                }
+
+                var yeniDoktor = new DOKTORLAR
+                {
+                    Ad = doktorAdi,
+                    Soyad = doktorSoyadi,
+                    Brans = DoktorBransi.SelectedItem.ToString(), // Branş ID yerine ismi kullanıyoruz
+                   
+                    PERSONELID = personelID // Yeni eklenen personelin ID'si
+                };
+
+                // Doktoru DOKTORLAR tablosuna ekleyin
+                context.DOKTORLAR.Add(yeniDoktor);
+                context.SaveChanges();
+
+                MessageBox.Show("Doktor başarıyla eklendi.");
+            }
+            //using (var context = new Hastanedb())
+            //{
+            //    var yeniDoktor = new DOKTORLAR
+            //    {
+            //        DoktorAdi = doktorAdi,
+            //        DoktorSoyadi = doktorSoyadi,
+            //        DoktorunBransi = _doktorunbransi_comboBox.SelectedItem.ToString(), // Branş ID yerine ismi kullanıyoruz
+            //        Doktorun_kati = (int)_doktorunkati_numericUpDown.Value,
+            //        PERSONELID = personelID
+            //    };
+
+            //    context.DOKTORLAR.Add(yeniDoktor);
+            //    context.SaveChanges();
+
+            //    MessageBox.Show("Doktor başarıyla eklendi.");
+            //}
+        }
+        private void FillComboSeachCode()
+        {
+            using (var context = new HealthHubDb())
+            {
+                var kullaniciListesi = context.KULLANICILAR
+                    .Where(g => !context.PERSONELLER.Any(p => p.KULLANICIID == g.KULLANICIID)
+                                && g.KullaniciAdi.ToLower() != "admin") // "admin" olanları büyük-küçük harf duyarsız olarak hariç tut
+                    .Select(g => new
+                    {
+                        g.KULLANICIID,
+                        g.KullaniciAdi
+                    }).ToList();
+
+                HangiKullanici.DataSource = kullaniciListesi;
+                HangiKullanici.ValueMember = "KULLANICIID";
+                HangiKullanici.DisplayMember = "KullaniciAdi";
+            }
+
+            //_kullanici_comboBox.Items.Clear();
+
+        }
+
     }
 }

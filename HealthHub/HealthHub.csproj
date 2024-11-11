@@ -216,11 +216,23 @@
     <Compile Include="HastaErişimiBulunan\Muayenelerim.Designer.cs">
       <DependentUpon>Muayenelerim.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullanıcıErişimleri\KullaniciAnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıErişimleri\KullaniciAnaMenu.Designer.cs">
+      <DependentUpon>KullaniciAnaMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullanıcıErişimleri\PersonelKayit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KullanıcıErişimleri\PersonelKayit.Designer.cs">
       <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullanıcıErişimleri\Personeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıErişimleri\Personeller.Designer.cs">
+      <DependentUpon>Personeller.cs</DependentUpon>
     </Compile>
     <Compile Include="KullanıcıErişimleri\TumKullanicilar.cs">
       <SubType>Form</SubType>
@@ -302,8 +314,14 @@
     <EmbeddedResource Include="HastaErişimiBulunan\Muayenelerim.resx">
       <DependentUpon>Muayenelerim.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıErişimleri\KullaniciAnaMenu.resx">
+      <DependentUpon>KullaniciAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıErişimleri\PersonelKayit.resx">
       <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıErişimleri\Personeller.resx">
+      <DependentUpon>Personeller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıErişimleri\TumKullanicilar.resx">
       <DependentUpon>TumKullanicilar.cs</DependentUpon>

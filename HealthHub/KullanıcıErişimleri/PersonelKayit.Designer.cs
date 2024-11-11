@@ -32,14 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.kayit = new System.Windows.Forms.Button();
             this.Vazgec = new System.Windows.Forms.Button();
-            this.PersonelAdi = new System.Windows.Forms.TextBox();
-            this.PersonelSoyadi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PersonelGorev = new System.Windows.Forms.ComboBox();
             this.HangiKullanici = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.DoktorBransi = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this._PersonelAdi = new System.Windows.Forms.TextBox();
+            this._PersonelSoyadi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -79,20 +79,6 @@
             this.Vazgec.Text = "VAZGEÇ";
             this.Vazgec.UseVisualStyleBackColor = true;
             this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
-            // 
-            // PersonelAdi
-            // 
-            this.PersonelAdi.Location = new System.Drawing.Point(104, 41);
-            this.PersonelAdi.Name = "PersonelAdi";
-            this.PersonelAdi.Size = new System.Drawing.Size(138, 20);
-            this.PersonelAdi.TabIndex = 10;
-            // 
-            // PersonelSoyadi
-            // 
-            this.PersonelSoyadi.Location = new System.Drawing.Point(104, 97);
-            this.PersonelSoyadi.Name = "PersonelSoyadi";
-            this.PersonelSoyadi.Size = new System.Drawing.Size(138, 20);
-            this.PersonelSoyadi.TabIndex = 11;
             // 
             // label3
             // 
@@ -154,20 +140,34 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Doktor ise Branşı?";
             // 
+            // _PersonelAdi
+            // 
+            this._PersonelAdi.Location = new System.Drawing.Point(104, 41);
+            this._PersonelAdi.Name = "_PersonelAdi";
+            this._PersonelAdi.Size = new System.Drawing.Size(138, 20);
+            this._PersonelAdi.TabIndex = 18;
+            // 
+            // _PersonelSoyadi
+            // 
+            this._PersonelSoyadi.Location = new System.Drawing.Point(104, 94);
+            this._PersonelSoyadi.Name = "_PersonelSoyadi";
+            this._PersonelSoyadi.Size = new System.Drawing.Size(138, 20);
+            this._PersonelSoyadi.TabIndex = 19;
+            // 
             // PersonelKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 413);
             this.ControlBox = false;
+            this.Controls.Add(this._PersonelSoyadi);
+            this.Controls.Add(this._PersonelAdi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.DoktorBransi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.HangiKullanici);
             this.Controls.Add(this.PersonelGorev);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.PersonelSoyadi);
-            this.Controls.Add(this.PersonelAdi);
             this.Controls.Add(this.Vazgec);
             this.Controls.Add(this.kayit);
             this.Controls.Add(this.label2);
@@ -186,13 +186,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button kayit;
         private System.Windows.Forms.Button Vazgec;
-        private System.Windows.Forms.TextBox PersonelAdi;
-        private System.Windows.Forms.TextBox PersonelSoyadi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox PersonelGorev;
         private System.Windows.Forms.ComboBox HangiKullanici;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox DoktorBransi;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox _PersonelAdi;
+        private System.Windows.Forms.TextBox _PersonelSoyadi;
     }
 }

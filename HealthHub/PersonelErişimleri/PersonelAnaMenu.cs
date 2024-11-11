@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthHub.KullanıcıErişimleri;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,12 @@ namespace HealthHub.PersonelErişimleri
 
             // Formu kapat
             this.Close();
+        }
+
+        private void _KullaniciIslemleri_Click(object sender, EventArgs e)
+        {
+          KullaniciAnaMenu kullaniciAnaMenu = new KullaniciAnaMenu();
+            kullaniciAnaMenu.Show();
         }
     }
 }
