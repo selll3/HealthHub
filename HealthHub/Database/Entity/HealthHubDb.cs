@@ -22,6 +22,9 @@ namespace HealthHub.Database.Entity
         public virtual DbSet<PERSONELLER> PERSONELLER { get; set; }
         public virtual DbSet<TAHLIL> TAHLIL { get; set; }
 
+        public virtual DbSet<TAHLILDEGERLERI> TAHLILDEGERLERI {  get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }

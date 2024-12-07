@@ -44,6 +44,7 @@
             this.KullaniciKayit.TabIndex = 9;
             this.KullaniciKayit.Text = "KAYIT OL";
             this.KullaniciKayit.UseVisualStyleBackColor = true;
+            this.KullaniciKayit.Click += new System.EventHandler(this.KullaniciKayit_Click);
             // 
             // ParolaKayit
             // 
@@ -101,6 +102,7 @@
             this.Controls.Add(this.KullaniciAdi);
             this.Name = "KullanciKayit";
             this.Text = "KullanciKayit";
+            this.Load += new System.EventHandler(this.KullanciKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
