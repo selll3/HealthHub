@@ -176,6 +176,7 @@
     <Compile Include="Database\Entity\PERSONELFORMYETKILERI.cs" />
     <Compile Include="Database\Entity\PERSONELLER.cs" />
     <Compile Include="Database\Entity\TAHLIL.cs" />
+    <Compile Include="Database\Entity\TAHLILDEGERLERI.cs" />
     <Compile Include="Database\Model\Hastalar.cs" />
     <Compile Include="Database\Model\Kullanicilar.cs" />
     <Compile Include="Database\Model\Personeller.cs" />

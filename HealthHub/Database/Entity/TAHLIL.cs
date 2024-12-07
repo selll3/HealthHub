@@ -9,16 +9,22 @@ namespace HealthHub.Database.Entity
     [Table("TAHLIL")]
     public partial class TAHLIL
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TAHLIL()
+        {
+            TAHLILDEGERLERI = new HashSet<TAHLILDEGERLERI>();
+        }
+
         public int TahlilID { get; set; }
 
         [StringLength(50)]
         public string TahlilIsmi { get; set; }
 
-        [StringLength(50)]
-        public string TahlilDegeri { get; set; }
-
         public int? HASTAID { get; set; }
 
         public virtual HASTALAR HASTALAR { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAHLILDEGERLERI> TAHLILDEGERLERI { get; set; }
     }
 }
