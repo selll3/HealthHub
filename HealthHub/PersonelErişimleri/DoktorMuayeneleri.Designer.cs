@@ -50,6 +50,8 @@
             this.DoktorMuayene.Name = "DoktorMuayene";
             this.DoktorMuayene.Size = new System.Drawing.Size(304, 286);
             this.DoktorMuayene.TabIndex = 10;
+            this.DoktorMuayene.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoktorMuayene_CellContentClick);
+            this.DoktorMuayene.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoktorMuayene_CellDoubleClick);
             // 
             // DoktorMuayeneleri
             // 

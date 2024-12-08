@@ -250,6 +250,12 @@
     <Compile Include="KullanıcıErişimleri\YetkiControl.Designer.cs">
       <DependentUpon>YetkiControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelErişimleri\DMuayeneleriAyrinti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelErişimleri\DMuayeneleriAyrinti.Designer.cs">
+      <DependentUpon>DMuayeneleriAyrinti.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelErişimleri\Doktorlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,12 @@
     </Compile>
     <Compile Include="PersonelErişimleri\TahlilGiris.Designer.cs">
       <DependentUpon>TahlilGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelErişimleri\TumMuayenelercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelErişimleri\TumMuayenelercs.Designer.cs">
+      <DependentUpon>TumMuayenelercs.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -332,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıErişimleri\YetkiControl.resx">
       <DependentUpon>YetkiControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelErişimleri\DMuayeneleriAyrinti.resx">
+      <DependentUpon>DMuayeneleriAyrinti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelErişimleri\Doktorlar.resx">
       <DependentUpon>Doktorlar.cs</DependentUpon>
