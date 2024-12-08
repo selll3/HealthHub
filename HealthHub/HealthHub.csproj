@@ -214,12 +214,6 @@
     <Compile Include="HastaErişimiBulunan\MuayeneEkle.Designer.cs">
       <DependentUpon>MuayeneEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="HastaErişimiBulunan\Muayenelerim.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HastaErişimiBulunan\Muayenelerim.Designer.cs">
-      <DependentUpon>Muayenelerim.cs</DependentUpon>
-    </Compile>
     <Compile Include="KullanıcıErişimleri\KullaniciAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,9 +320,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıErişimleri\KullanciKayit.resx">
       <DependentUpon>KullanciKayit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HastaErişimiBulunan\Muayenelerim.resx">
-      <DependentUpon>Muayenelerim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıErişimleri\KullaniciAnaMenu.resx">
       <DependentUpon>KullaniciAnaMenu.cs</DependentUpon>
