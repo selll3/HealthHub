@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Vazgec = new System.Windows.Forms.Button();
             this.Doktor = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Doktor)).BeginInit();
@@ -35,19 +36,34 @@
             // 
             // Vazgec
             // 
-            this.Vazgec.Location = new System.Drawing.Point(12, 318);
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Vazgec.Location = new System.Drawing.Point(12, 313);
             this.Vazgec.Name = "Vazgec";
-            this.Vazgec.Size = new System.Drawing.Size(78, 22);
+            this.Vazgec.Size = new System.Drawing.Size(78, 29);
             this.Vazgec.TabIndex = 10;
             this.Vazgec.Text = "VAZGEÇ";
-            this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.UseVisualStyleBackColor = false;
             this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
             // Doktor
             // 
+            this.Doktor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Doktor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Doktor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Doktor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.Doktor.Location = new System.Drawing.Point(12, 12);
             this.Doktor.Name = "Doktor";
+            this.Doktor.ReadOnly = true;
+            this.Doktor.RowHeadersVisible = false;
+            this.Doktor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Doktor.Size = new System.Drawing.Size(379, 277);
             this.Doktor.TabIndex = 11;
             // 

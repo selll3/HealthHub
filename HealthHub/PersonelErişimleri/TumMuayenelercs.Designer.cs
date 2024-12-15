@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.vazgec = new System.Windows.Forms.Button();
             this.GUNCELLE = new System.Windows.Forms.Button();
@@ -38,52 +39,72 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(433, 254);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // vazgec
             // 
-            this.vazgec.Location = new System.Drawing.Point(12, 314);
+            this.vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.vazgec.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.vazgec.Location = new System.Drawing.Point(12, 294);
             this.vazgec.Name = "vazgec";
-            this.vazgec.Size = new System.Drawing.Size(75, 23);
+            this.vazgec.Size = new System.Drawing.Size(75, 34);
             this.vazgec.TabIndex = 1;
             this.vazgec.Text = "VAZGEÇ";
-            this.vazgec.UseVisualStyleBackColor = true;
+            this.vazgec.UseVisualStyleBackColor = false;
             this.vazgec.Click += new System.EventHandler(this.vazgec_Click);
             // 
             // GUNCELLE
             // 
-            this.GUNCELLE.Location = new System.Drawing.Point(126, 314);
+            this.GUNCELLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GUNCELLE.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GUNCELLE.Location = new System.Drawing.Point(124, 294);
             this.GUNCELLE.Name = "GUNCELLE";
-            this.GUNCELLE.Size = new System.Drawing.Size(75, 23);
+            this.GUNCELLE.Size = new System.Drawing.Size(89, 34);
             this.GUNCELLE.TabIndex = 2;
             this.GUNCELLE.Text = "GÜNCELLE";
-            this.GUNCELLE.UseVisualStyleBackColor = true;
+            this.GUNCELLE.UseVisualStyleBackColor = false;
             this.GUNCELLE.Click += new System.EventHandler(this.GUNCELLE_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 314);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(255, 294);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "SİL";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EKLE
             // 
-            this.EKLE.Location = new System.Drawing.Point(370, 314);
+            this.EKLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EKLE.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.EKLE.Location = new System.Drawing.Point(370, 294);
             this.EKLE.Name = "EKLE";
-            this.EKLE.Size = new System.Drawing.Size(75, 23);
+            this.EKLE.Size = new System.Drawing.Size(75, 34);
             this.EKLE.TabIndex = 4;
             this.EKLE.Text = "EKLE";
-            this.EKLE.UseVisualStyleBackColor = true;
+            this.EKLE.UseVisualStyleBackColor = false;
             this.EKLE.Click += new System.EventHandler(this.EKLE_Click);
             // 
             // TumMuayenelercs

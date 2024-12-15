@@ -72,7 +72,7 @@ namespace HealthHub
                 if (userAdded)
                 {
                     // Yetkileri ekleme
-                    List<int> formIDs = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+                    List<int> formIDs = new List<int> { 1,2,3,4,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011 };
 
                     foreach (var formID in formIDs)
                     {
@@ -103,6 +103,18 @@ namespace HealthHub
                 }
             }
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                ParolaKayit.PasswordChar = '\0'; // Şifreyi görünür yap
+            }
+            else
+            {
+                ParolaKayit.PasswordChar = '*'; // Şifreyi tekrar gizle
+            }
         }
     }
 }

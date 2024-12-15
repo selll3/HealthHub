@@ -69,5 +69,17 @@ namespace HealthHub.PersonelErişimleri
             // Formu kapat
             this.Close();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                Parola.PasswordChar = '\0'; // Şifreyi görünür yap
+            }
+            else
+            {
+                Parola.PasswordChar = '*'; // Şifreyi tekrar gizle
+            }
+        }
     }
 }

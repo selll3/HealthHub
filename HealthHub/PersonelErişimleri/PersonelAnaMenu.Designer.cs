@@ -39,72 +39,86 @@
             // 
             // Vazgec
             // 
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.Vazgec.Location = new System.Drawing.Point(12, 319);
             this.Vazgec.Name = "Vazgec";
-            this.Vazgec.Size = new System.Drawing.Size(78, 22);
+            this.Vazgec.Size = new System.Drawing.Size(78, 31);
             this.Vazgec.TabIndex = 9;
             this.Vazgec.Text = "VAZGEÇ";
-            this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.UseVisualStyleBackColor = false;
             this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
             // DoktorMuayeneleri
             // 
+            this.DoktorMuayeneleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.DoktorMuayeneleri.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.DoktorMuayeneleri.Location = new System.Drawing.Point(12, 12);
             this.DoktorMuayeneleri.Name = "DoktorMuayeneleri";
-            this.DoktorMuayeneleri.Size = new System.Drawing.Size(184, 28);
+            this.DoktorMuayeneleri.Size = new System.Drawing.Size(235, 28);
             this.DoktorMuayeneleri.TabIndex = 10;
             this.DoktorMuayeneleri.Text = "Doktor Muayeneleri";
-            this.DoktorMuayeneleri.UseVisualStyleBackColor = true;
+            this.DoktorMuayeneleri.UseVisualStyleBackColor = false;
             this.DoktorMuayeneleri.Click += new System.EventHandler(this.DoktorMuayeneleri_Click);
             // 
             // Hastalar
             // 
+            this.Hastalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.Hastalar.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.Hastalar.Location = new System.Drawing.Point(12, 105);
             this.Hastalar.Name = "Hastalar";
-            this.Hastalar.Size = new System.Drawing.Size(184, 28);
+            this.Hastalar.Size = new System.Drawing.Size(235, 28);
             this.Hastalar.TabIndex = 11;
             this.Hastalar.Text = "Hastalar";
-            this.Hastalar.UseVisualStyleBackColor = true;
+            this.Hastalar.UseVisualStyleBackColor = false;
             this.Hastalar.Click += new System.EventHandler(this.Hastalar_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button3.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.button3.Location = new System.Drawing.Point(12, 201);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 28);
+            this.button3.Size = new System.Drawing.Size(235, 28);
             this.button3.TabIndex = 12;
-            this.button3.Text = "Tahlil Verilerinin Kaydı";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "TAHLIL VERILERININ KAYDI\r\n";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // _KullaniciIslemleri
             // 
+            this._KullaniciIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this._KullaniciIslemleri.Font = new System.Drawing.Font("Stencil", 9.75F);
             this._KullaniciIslemleri.Location = new System.Drawing.Point(12, 256);
             this._KullaniciIslemleri.Name = "_KullaniciIslemleri";
-            this._KullaniciIslemleri.Size = new System.Drawing.Size(181, 23);
+            this._KullaniciIslemleri.Size = new System.Drawing.Size(235, 27);
             this._KullaniciIslemleri.TabIndex = 13;
-            this._KullaniciIslemleri.Text = "Kullanıcı işlemleri";
-            this._KullaniciIslemleri.UseVisualStyleBackColor = true;
+            this._KullaniciIslemleri.Text = "KULLANICI ISLEMLERI";
+            this._KullaniciIslemleri.UseVisualStyleBackColor = false;
             this._KullaniciIslemleri.Click += new System.EventHandler(this._KullaniciIslemleri_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button1.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.button1.Location = new System.Drawing.Point(12, 56);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 28);
+            this.button1.Size = new System.Drawing.Size(235, 28);
             this.button1.TabIndex = 14;
             this.button1.Text = "Tüm Muayeneler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button2.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.button2.Location = new System.Drawing.Point(9, 155);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 28);
+            this.button2.Size = new System.Drawing.Size(238, 28);
             this.button2.TabIndex = 15;
             this.button2.Text = "Tüm Tahliller";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PersonelAnaMenu

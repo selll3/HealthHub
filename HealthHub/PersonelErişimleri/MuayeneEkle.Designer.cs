@@ -40,18 +40,20 @@
             // 
             // Doktor
             // 
+            this.Doktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.Doktor.FormattingEnabled = true;
-            this.Doktor.Location = new System.Drawing.Point(326, 95);
+            this.Doktor.Location = new System.Drawing.Point(125, 103);
             this.Doktor.Name = "Doktor";
-            this.Doktor.Size = new System.Drawing.Size(102, 21);
+            this.Doktor.Size = new System.Drawing.Size(121, 21);
             this.Doktor.TabIndex = 0;
             this.Doktor.SelectedIndexChanged += new System.EventHandler(this.DoktorBransi_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 28);
+            this.dateTimePicker1.Location = new System.Drawing.Point(125, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
@@ -60,54 +62,62 @@
             // TarihVeSaat
             // 
             this.TarihVeSaat.AutoSize = true;
-            this.TarihVeSaat.Location = new System.Drawing.Point(12, 28);
+            this.TarihVeSaat.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.TarihVeSaat.Location = new System.Drawing.Point(6, 9);
             this.TarihVeSaat.Name = "TarihVeSaat";
-            this.TarihVeSaat.Size = new System.Drawing.Size(77, 13);
+            this.TarihVeSaat.Size = new System.Drawing.Size(107, 16);
             this.TarihVeSaat.TabIndex = 3;
             this.TarihVeSaat.Text = "Tarih ve Saat :";
             // 
             // hastasecimi
             // 
             this.hastasecimi.AutoSize = true;
-            this.hastasecimi.Location = new System.Drawing.Point(12, 98);
+            this.hastasecimi.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.hastasecimi.Location = new System.Drawing.Point(6, 55);
             this.hastasecimi.Name = "hastasecimi";
-            this.hastasecimi.Size = new System.Drawing.Size(75, 13);
+            this.hastasecimi.Size = new System.Drawing.Size(101, 16);
             this.hastasecimi.TabIndex = 4;
             this.hastasecimi.Text = "Hasta Seçimi :";
             // 
             // Doktorlar
             // 
             this.Doktorlar.AutoSize = true;
-            this.Doktorlar.Location = new System.Drawing.Point(264, 98);
+            this.Doktorlar.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Doktorlar.Location = new System.Drawing.Point(6, 108);
             this.Doktorlar.Name = "Doktorlar";
-            this.Doktorlar.Size = new System.Drawing.Size(56, 13);
+            this.Doktorlar.Size = new System.Drawing.Size(89, 16);
             this.Doktorlar.TabIndex = 5;
             this.Doktorlar.Text = "Doktorlar :";
             // 
             // MuayeneOlustur
             // 
-            this.MuayeneOlustur.Location = new System.Drawing.Point(272, 220);
+            this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MuayeneOlustur.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.MuayeneOlustur.Location = new System.Drawing.Point(184, 166);
             this.MuayeneOlustur.Name = "MuayeneOlustur";
-            this.MuayeneOlustur.Size = new System.Drawing.Size(156, 22);
+            this.MuayeneOlustur.Size = new System.Drawing.Size(156, 28);
             this.MuayeneOlustur.TabIndex = 6;
             this.MuayeneOlustur.Text = "Muayene Oluştur";
-            this.MuayeneOlustur.UseVisualStyleBackColor = true;
+            this.MuayeneOlustur.UseVisualStyleBackColor = false;
             this.MuayeneOlustur.Click += new System.EventHandler(this.MuayeneOlustur_Click);
             // 
             // Vazgec
             // 
-            this.Vazgec.Location = new System.Drawing.Point(15, 220);
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Vazgec.Location = new System.Drawing.Point(9, 166);
             this.Vazgec.Name = "Vazgec";
-            this.Vazgec.Size = new System.Drawing.Size(78, 22);
+            this.Vazgec.Size = new System.Drawing.Size(78, 28);
             this.Vazgec.TabIndex = 7;
             this.Vazgec.Text = "VAZGEÇ";
-            this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.UseVisualStyleBackColor = false;
             this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 95);
+            this.comboBox1.Location = new System.Drawing.Point(125, 53);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
@@ -117,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 295);
+            this.ClientSize = new System.Drawing.Size(351, 242);
             this.ControlBox = false;
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Vazgec);

@@ -59,9 +59,38 @@ namespace HealthHub.PersonelErişimleri
                 }
             }
         }
+        private void button_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.FromArgb(255, 228, 255); // Hover efekti
+        }
+
+        private void button_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.FromArgb(191, 223, 255); // Orijinal renk
+        }
         private void PersonelAnaMenu_Load(object sender, EventArgs e)
         {
+            button1.MouseEnter += button_MouseEnter;
+            button1.MouseLeave += button_MouseLeave;
 
+            button2.MouseEnter += button_MouseEnter;
+            button2.MouseLeave += button_MouseLeave;
+
+            button3.MouseEnter += button_MouseEnter;
+            button3.MouseLeave += button_MouseLeave;
+
+            DoktorMuayeneleri.MouseEnter += button_MouseEnter;
+            DoktorMuayeneleri.MouseLeave += button_MouseLeave;
+
+            Hastalar.MouseEnter += button_MouseEnter;
+            Hastalar.MouseLeave += button_MouseLeave;
+
+            _KullaniciIslemleri.MouseEnter += button_MouseEnter;
+            _KullaniciIslemleri.MouseLeave += button_MouseLeave;
+
+           
         }
 
         private void Vazgec_Click(object sender, EventArgs e)
@@ -80,7 +109,7 @@ namespace HealthHub.PersonelErişimleri
 
         private void _KullaniciIslemleri_Click(object sender, EventArgs e)
         {
-          KullaniciAnaMenu kullaniciAnaMenu = new KullaniciAnaMenu();
+          KullaniciAnaMenu kullaniciAnaMenu = new KullaniciAnaMenu(currentUserId);
             kullaniciAnaMenu.Show();
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Vazgec = new System.Windows.Forms.Button();
             this.DoktorMuayene = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DoktorMuayene)).BeginInit();
@@ -35,19 +36,34 @@
             // 
             // Vazgec
             // 
-            this.Vazgec.Location = new System.Drawing.Point(12, 332);
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Vazgec.Location = new System.Drawing.Point(12, 325);
             this.Vazgec.Name = "Vazgec";
-            this.Vazgec.Size = new System.Drawing.Size(78, 22);
+            this.Vazgec.Size = new System.Drawing.Size(78, 29);
             this.Vazgec.TabIndex = 9;
             this.Vazgec.Text = "VAZGEÇ";
-            this.Vazgec.UseVisualStyleBackColor = true;
+            this.Vazgec.UseVisualStyleBackColor = false;
             this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
             // DoktorMuayene
             // 
+            this.DoktorMuayene.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DoktorMuayene.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DoktorMuayene.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DoktorMuayene.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.DoktorMuayene.Location = new System.Drawing.Point(12, 12);
             this.DoktorMuayene.Name = "DoktorMuayene";
+            this.DoktorMuayene.ReadOnly = true;
+            this.DoktorMuayene.RowHeadersVisible = false;
+            this.DoktorMuayene.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DoktorMuayene.Size = new System.Drawing.Size(304, 286);
             this.DoktorMuayene.TabIndex = 10;
             this.DoktorMuayene.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoktorMuayene_CellContentClick);
