@@ -52,7 +52,7 @@
             // ParolaKayit
             // 
             this.ParolaKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
-            this.ParolaKayit.Font = new System.Drawing.Font("Showcard Gothic", 9F);
+            this.ParolaKayit.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.ParolaKayit.Location = new System.Drawing.Point(105, 40);
             this.ParolaKayit.Name = "ParolaKayit";
             this.ParolaKayit.PasswordChar = '#';
@@ -62,7 +62,7 @@
             // KullaniciAdiKayit
             // 
             this.KullaniciAdiKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
-            this.KullaniciAdiKayit.Font = new System.Drawing.Font("Showcard Gothic", 9F);
+            this.KullaniciAdiKayit.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.KullaniciAdiKayit.Location = new System.Drawing.Point(105, 6);
             this.KullaniciAdiKayit.Name = "KullaniciAdiKayit";
             this.KullaniciAdiKayit.Size = new System.Drawing.Size(133, 22);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,10 +59,11 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.comboBox1.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(111, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 23;
             // 
             // label4
@@ -89,17 +91,19 @@
             // tahililismicombo
             // 
             this.tahililismicombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.tahililismicombo.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.tahililismicombo.FormattingEnabled = true;
             this.tahililismicombo.Items.AddRange(new object[] {
             "Kan Tahlili"});
             this.tahililismicombo.Location = new System.Drawing.Point(111, 75);
             this.tahililismicombo.Name = "tahililismicombo";
-            this.tahililismicombo.Size = new System.Drawing.Size(91, 21);
+            this.tahililismicombo.Size = new System.Drawing.Size(91, 23);
             this.tahililismicombo.TabIndex = 35;
             // 
             // parametreadicombo
             // 
             this.parametreadicombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.parametreadicombo.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.parametreadicombo.FormattingEnabled = true;
             this.parametreadicombo.Items.AddRange(new object[] {
             "Hemoglobin (Hb)",
@@ -109,15 +113,16 @@
             "Kolesterol"});
             this.parametreadicombo.Location = new System.Drawing.Point(111, 141);
             this.parametreadicombo.Name = "parametreadicombo";
-            this.parametreadicombo.Size = new System.Drawing.Size(91, 21);
+            this.parametreadicombo.Size = new System.Drawing.Size(91, 23);
             this.parametreadicombo.TabIndex = 36;
             // 
             // degercombo
             // 
             this.degercombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.degercombo.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.degercombo.Location = new System.Drawing.Point(111, 198);
             this.degercombo.Name = "degercombo";
-            this.degercombo.Size = new System.Drawing.Size(91, 20);
+            this.degercombo.Size = new System.Drawing.Size(91, 22);
             this.degercombo.TabIndex = 37;
             // 
             // label1
@@ -152,8 +157,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.dataGridView1.Location = new System.Drawing.Point(250, 11);
             this.dataGridView1.Name = "dataGridView1";

@@ -99,6 +99,7 @@
             // PersonelGorev
             // 
             this.PersonelGorev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.PersonelGorev.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.PersonelGorev.ForeColor = System.Drawing.Color.Black;
             this.PersonelGorev.FormattingEnabled = true;
             this.PersonelGorev.Items.AddRange(new object[] {
@@ -107,17 +108,18 @@
             "Hemşire"});
             this.PersonelGorev.Location = new System.Drawing.Point(165, 159);
             this.PersonelGorev.Name = "PersonelGorev";
-            this.PersonelGorev.Size = new System.Drawing.Size(138, 21);
+            this.PersonelGorev.Size = new System.Drawing.Size(138, 23);
             this.PersonelGorev.TabIndex = 13;
             // 
             // HangiKullanici
             // 
             this.HangiKullanici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.HangiKullanici.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.HangiKullanici.ForeColor = System.Drawing.Color.Black;
             this.HangiKullanici.FormattingEnabled = true;
             this.HangiKullanici.Location = new System.Drawing.Point(165, 218);
             this.HangiKullanici.Name = "HangiKullanici";
-            this.HangiKullanici.Size = new System.Drawing.Size(138, 21);
+            this.HangiKullanici.Size = new System.Drawing.Size(138, 23);
             this.HangiKullanici.TabIndex = 14;
             // 
             // label4
@@ -133,6 +135,7 @@
             // DoktorBransi
             // 
             this.DoktorBransi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.DoktorBransi.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.DoktorBransi.ForeColor = System.Drawing.Color.Black;
             this.DoktorBransi.FormattingEnabled = true;
             this.DoktorBransi.Items.AddRange(new object[] {
@@ -142,7 +145,7 @@
             ""});
             this.DoktorBransi.Location = new System.Drawing.Point(165, 274);
             this.DoktorBransi.Name = "DoktorBransi";
-            this.DoktorBransi.Size = new System.Drawing.Size(138, 21);
+            this.DoktorBransi.Size = new System.Drawing.Size(138, 23);
             this.DoktorBransi.TabIndex = 16;
             // 
             // label5
@@ -158,17 +161,19 @@
             // _PersonelAdi
             // 
             this._PersonelAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this._PersonelAdi.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this._PersonelAdi.Location = new System.Drawing.Point(165, 44);
             this._PersonelAdi.Name = "_PersonelAdi";
-            this._PersonelAdi.Size = new System.Drawing.Size(138, 20);
+            this._PersonelAdi.Size = new System.Drawing.Size(138, 22);
             this._PersonelAdi.TabIndex = 18;
             // 
             // _PersonelSoyadi
             // 
             this._PersonelSoyadi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this._PersonelSoyadi.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this._PersonelSoyadi.Location = new System.Drawing.Point(165, 93);
             this._PersonelSoyadi.Name = "_PersonelSoyadi";
-            this._PersonelSoyadi.Size = new System.Drawing.Size(138, 20);
+            this._PersonelSoyadi.Size = new System.Drawing.Size(138, 22);
             this._PersonelSoyadi.TabIndex = 19;
             // 
             // PersonelKayit

@@ -52,6 +52,7 @@
             // DoktorMuayeneleri
             // 
             this.DoktorMuayeneleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.DoktorMuayeneleri.Enabled = false;
             this.DoktorMuayeneleri.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.DoktorMuayeneleri.Location = new System.Drawing.Point(12, 12);
             this.DoktorMuayeneleri.Name = "DoktorMuayeneleri";
@@ -64,6 +65,7 @@
             // Hastalar
             // 
             this.Hastalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.Hastalar.Enabled = false;
             this.Hastalar.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.Hastalar.Location = new System.Drawing.Point(12, 105);
             this.Hastalar.Name = "Hastalar";
@@ -76,6 +78,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.button3.Location = new System.Drawing.Point(12, 201);
             this.button3.Name = "button3";
@@ -88,6 +91,7 @@
             // _KullaniciIslemleri
             // 
             this._KullaniciIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this._KullaniciIslemleri.Enabled = false;
             this._KullaniciIslemleri.Font = new System.Drawing.Font("Stencil", 9.75F);
             this._KullaniciIslemleri.Location = new System.Drawing.Point(12, 256);
             this._KullaniciIslemleri.Name = "_KullaniciIslemleri";
@@ -100,6 +104,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.button1.Location = new System.Drawing.Point(12, 56);
             this.button1.Name = "button1";
@@ -112,6 +117,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.button2.Location = new System.Drawing.Point(9, 155);
             this.button2.Name = "button2";

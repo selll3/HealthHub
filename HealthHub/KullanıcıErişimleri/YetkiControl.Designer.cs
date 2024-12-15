@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Vazgec = new System.Windows.Forms.Button();
             this.YetkiKontrol = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             // 
             // YetkiKontrol
             // 
+            this.YetkiKontrol.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.YetkiKontrol.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
@@ -59,6 +61,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.YetkiKontrol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.YetkiKontrol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.YetkiKontrol.DefaultCellStyle = dataGridViewCellStyle2;
             this.YetkiKontrol.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.YetkiKontrol.Location = new System.Drawing.Point(12, 12);
             this.YetkiKontrol.Name = "YetkiKontrol";
@@ -66,7 +76,7 @@
             this.YetkiKontrol.RowHeadersVisible = false;
             this.YetkiKontrol.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.YetkiKontrol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.YetkiKontrol.Size = new System.Drawing.Size(324, 309);
+            this.YetkiKontrol.Size = new System.Drawing.Size(269, 309);
             this.YetkiKontrol.TabIndex = 11;
             this.YetkiKontrol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.YetkiKontrol_CellContentClick);
             // 
@@ -74,7 +84,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.button1.Location = new System.Drawing.Point(256, 341);
+            this.button1.Location = new System.Drawing.Point(206, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 28);
             this.button1.TabIndex = 12;
@@ -86,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 392);
+            this.ClientSize = new System.Drawing.Size(289, 380);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.YetkiKontrol);

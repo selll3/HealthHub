@@ -105,5 +105,10 @@ namespace HealthHub
         {
 
         }
+
+        private void _Tahliller_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
