@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using HealthHub.Database.Model;
 using System.Data.Entity.Migrations;
+using System.Windows.Forms;
 
 namespace HealthHub.Database.Model
 {
@@ -15,34 +16,40 @@ namespace HealthHub.Database.Model
         public static HealthHubDb dbt = new HealthHubDb();
 
         // Tahlilleri getir
+
+
         public static List<dynamic> TahlilleriGetir(int hastaID)
         {
             try
             {
-                var tahliller = dbt.TAHLIL
-                    .Where(t => t.HASTAID == hastaID) // Seçilen hastaya ait tahlilleri filtrele
-                    .Select(t => new
-                    {
-                        t.TahlilID,          // Tahlil ID
-                        t.TahlilIsmi,        // Tahlil Türü
-                        Degerler = dbt.TAHLILDEGERLERI
-                            .Where(td => td.TahlilDID == t.TahlilID)
-                            .Select(td => new
+                using (var context = new HealthHubDb())
+                {
+                    // Tahlilleri ve ilgili değerleri getir
+                    var tahliller = context.TAHLIL
+                        .Where(t => t.HASTAID == hastaID) // Hasta ID'sine göre filtrele
+                        .Select(t => new
+                        {
+                            t.TahlilID,         // Tahlil ID
+                            t.TahlilIsmi,       // Tahlil Türü
+                            Degerler = t.TAHLILDEGERLERI.Select(td => new
                             {
                                 td.ParametreAdi, // Test Parametresi
-                                td.Deger     // Test Değeri
-                                     // Test Birimi
+                                td.Deger         // Test Değeri
                             }).ToList()
-                    })
-                    .ToList<dynamic>(); // Dinamik listeye dönüştür
+                        })
+                        .ToList<dynamic>(); // Dinamik listeye dönüştür
 
-                return tahliller;
+                    return tahliller;
+                }
             }
             catch (Exception ex)
             {
+                // Hata durumunda loglama yapabilirsiniz
+                Console.WriteLine($"Hata: {ex.Message}");
                 return null; // Hata durumunda null döndür
             }
         }
+
 
         // Tahlil ekle
         public static bool TahlilEkle(TAHLIL tahlil, List<TAHLILDEGERLERI> tahlilDegerleri)

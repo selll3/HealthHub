@@ -18,7 +18,9 @@ namespace HealthHub.KullanıcıErişimleri
             currentUserId = userId;
             LoadDataIntoGridp();
             InitializeComponent();
+           
         }
+
         public void LoadDataIntoGridp()
         {
             //dtp = new DataTable();

@@ -1,4 +1,5 @@
-﻿using HealthHub.KullanıcıErişimleri;
+﻿using HealthHub.Database.Entity;
+using HealthHub.KullanıcıErişimleri;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,50 @@ namespace HealthHub.PersonelErişimleri
     public partial class PersonelAnaMenu : Form
     {
         private int currentUserId;
+        HealthHubDb menu = new HealthHubDb();
         public PersonelAnaMenu(int userId)
         {
             currentUserId = userId;
             InitializeComponent();
+            yetkileriolustur();
         }
+        private void yetkileriolustur()
+        {
 
+            var userPermissions = menu.PERSONELFORMYETKILERI
+                                           .Where(p => p.KULLANICIID == currentUserId && p.Yetki == true)
+                                           .ToList();
+
+
+            foreach (var permission in userPermissions)
+            {
+                switch (permission.FormID)
+                {
+                    case 1:
+                        DoktorMuayeneleri.Enabled = true;
+                        break;
+                    case 2:
+                        button1.Enabled = true;
+                       
+                        break;
+                    case 1003:  
+                        Hastalar.Enabled = true;
+                        break;
+                    case 1004:
+                        button2.Enabled = true;
+                        break;
+                    case 1005:
+                        button3.Enabled = true;
+                        break;
+                    case 1006:
+                        _KullaniciIslemleri.Enabled = true;
+                        break;
+
+
+
+                }
+            }
+        }
         private void PersonelAnaMenu_Load(object sender, EventArgs e)
         {
 
@@ -53,7 +92,7 @@ namespace HealthHub.PersonelErişimleri
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TumMuayenelercs tm = new TumMuayenelercs();
+            TumMuayenelercs tm = new TumMuayenelercs(currentUserId);
             tm.Show();
         }
 

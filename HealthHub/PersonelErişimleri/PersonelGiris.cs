@@ -30,8 +30,7 @@ namespace HealthHub.PersonelErişimleri
 
             // LINQ kullanarak veritabanında kullanıcı sorgulama
             var kullanici = hb.KULLANICILAR
-                .Where(g => g.KullaniciAdi.Equals(kullaniciAdi, StringComparison.OrdinalIgnoreCase) &&
-                            g.Parola.Equals(parola))
+                .Where(g => g.KullaniciAdi == kullaniciAdi && g.Parola == parola) // Büyük/küçük harf duyarlı eşleşme
                 .FirstOrDefault();
 
             if (kullanici != null)
@@ -41,7 +40,7 @@ namespace HealthHub.PersonelErişimleri
 
                 DoktorMuayeneleri dm = new DoktorMuayeneleri(kullaniciID);
 
-                PersonelAnaMenu personelAnaMenu= new PersonelAnaMenu(kullaniciID);
+                PersonelAnaMenu personelAnaMenu = new PersonelAnaMenu(kullaniciID);
                 this.Hide();
                 personelAnaMenu.Show();
             }
@@ -49,8 +48,8 @@ namespace HealthHub.PersonelErişimleri
             {
                 MessageBox.Show("Kullanıcı adı veya şifre hatalı.");
             }
-
         }
+
 
         private void PersonelGiris_Load(object sender, EventArgs e)
         {

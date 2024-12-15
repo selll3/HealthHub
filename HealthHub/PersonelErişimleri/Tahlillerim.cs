@@ -60,16 +60,36 @@ namespace HealthHub
         {
             if (comboBox1.SelectedValue != null && int.TryParse(comboBox1.SelectedValue.ToString(), out int hastaID))
             {
-                List<dynamic> tahliller = Tahliller.TahlilleriGetir(hastaID); // Tahlilleri getir
-                if (tahliller != null)
+                // Tahlilleri dinamik türde getir
+                var tahliller = HealthHub.Database.Model.Tahliller.TahlilleriGetir(hastaID);
+
+                if (tahliller != null && tahliller.Any())
                 {
-                    // Tahlilleri DataGridView'e ata
-                    _Tahliller.DataSource = tahliller.Select(t => new
+                    var tahlilListesi = new List<object>();
+
+                    // Her tahlili işle
+                    foreach (var tahlil in tahliller)
                     {
-                        TahlilID = t.TahlilID,
-                        TahlilIsmi = t.TahlilIsmi,
-                        TestDegerleri = string.Join(", ", ((List<dynamic>)t.Degerler).Select(d => $"{d.ParametreAdi}: {d.Deger}"))
-                    }).ToList();
+                        // Dinamik türün içindeki 'Degerler' listesini manuel işle
+                        var degerlerListesi = tahlil.Degerler as IEnumerable<dynamic>;
+
+                        string testDegerleri = "Değerler yok";
+                        if (degerlerListesi != null && degerlerListesi.Any())
+                        {
+                            testDegerleri = string.Join(", ", degerlerListesi.Select(d => $"{d.ParametreAdi}: {d.Deger}"));
+                        }
+
+                        // Tahlili işlenmiş haliyle listeye ekle
+                        tahlilListesi.Add(new
+                        {
+                            TahlilID = tahlil.TahlilID,
+                            TahlilIsmi = tahlil.TahlilIsmi,
+                            TestDegerleri = testDegerleri
+                        });
+                    }
+
+                    // İşlenmiş tahlilleri DataGridView'e ata
+                    _Tahliller.DataSource = tahlilListesi;
                 }
                 else
                 {
@@ -78,6 +98,8 @@ namespace HealthHub
                 }
             }
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {

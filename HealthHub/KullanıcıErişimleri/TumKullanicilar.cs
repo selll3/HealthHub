@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthHub.Database.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HealthHub.KullanıcıErişimleri
 {
@@ -14,11 +16,35 @@ namespace HealthHub.KullanıcıErişimleri
     {
         private int currentUserId;
         public int selectedUserID; 
+        HealthHubDb yetkigor = new HealthHubDb();
         public TumKullanicilar(int userId)
         {
             InitializeComponent();
             LoadDatakullanici();
             currentUserId = userId;
+            yetkileriolustur();
+
+        }
+        private void yetkileriolustur()
+        {
+
+            var userPermissions = yetkigor.PERSONELFORMYETKILERI
+                                           .Where(p => p.KULLANICIID == currentUserId && p.Yetki == true)
+                                           .ToList();
+
+
+            foreach (var permission in userPermissions)
+            {
+                switch (permission.FormID)
+                {
+                    case 1011:
+                        yetkilerigor.Enabled = true;
+                        break;
+                   
+
+
+                }
+            }
         }
         public void LoadDatakullanici()
         {

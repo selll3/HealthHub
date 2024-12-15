@@ -49,7 +49,8 @@
             this._Tahliller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._Tahliller.Location = new System.Drawing.Point(12, 103);
             this._Tahliller.Name = "_Tahliller";
-            this._Tahliller.Size = new System.Drawing.Size(328, 129);
+            this._Tahliller.ReadOnly = true;
+            this._Tahliller.Size = new System.Drawing.Size(422, 129);
             this._Tahliller.TabIndex = 9;
             // 
             // comboBox1

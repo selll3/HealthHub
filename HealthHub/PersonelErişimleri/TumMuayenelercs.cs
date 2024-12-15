@@ -2,24 +2,54 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthHub.Database.Model;
+using HealthHub.Database.Entity;
 namespace HealthHub.PersonelErişimleri
 {
     public partial class TumMuayenelercs : Form
-    {
-        public TumMuayenelercs()
+    {   HealthHubDb pdb = new HealthHubDb();
+        private int currentUserId;
+        public TumMuayenelercs(int Userid)
         {
+            currentUserId = Userid;
             InitializeComponent();
+            yetkileriolustur();
         }
 
         private void TumMuayenelercs_Load(object sender, EventArgs e)
         {
             ListeleMuayeneler();
+        }
+        private void yetkileriolustur()
+        {
+
+            var userPermissions = pdb.PERSONELFORMYETKILERI
+                                           .Where(p => p.KULLANICIID == currentUserId && p.Yetki == true)
+                                           .ToList();
+
+
+            foreach (var permission in userPermissions)
+            {
+                switch (permission.FormID)
+                {
+                    case 3:
+                        EKLE.Enabled = true;
+                        break;
+                    case 4:
+                        GUNCELLE.Enabled = true;
+                        button1.Enabled = true;
+                        break;
+
+
+
+                }
+            }
         }
         private void ListeleMuayeneler()
         {
