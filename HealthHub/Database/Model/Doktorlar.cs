@@ -20,7 +20,7 @@ namespace HealthHub.Database.Model
         {
 
 
-            var randevularigetir = dbd.DOKTORLAR
+            var doktorlarigetir = dbd.DOKTORLAR
                 .Select(d => new
                 {
 
@@ -33,7 +33,7 @@ namespace HealthHub.Database.Model
                 })
                 .ToList<dynamic>();          // Dinamik olarak listeye dönüştür
 
-            return randevularigetir;
+            return doktorlarigetir;
 
         }
 

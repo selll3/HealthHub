@@ -83,6 +83,8 @@
             // tahililismicombo
             // 
             this.tahililismicombo.FormattingEnabled = true;
+            this.tahililismicombo.Items.AddRange(new object[] {
+            "Kan Tahlili"});
             this.tahililismicombo.Location = new System.Drawing.Point(77, 75);
             this.tahililismicombo.Name = "tahililismicombo";
             this.tahililismicombo.Size = new System.Drawing.Size(91, 21);
@@ -91,6 +93,12 @@
             // parametreadicombo
             // 
             this.parametreadicombo.FormattingEnabled = true;
+            this.parametreadicombo.Items.AddRange(new object[] {
+            "Hemoglobin (Hb)",
+            "WBC",
+            "PLT",
+            "Hct",
+            "Kolesterol"});
             this.parametreadicombo.Location = new System.Drawing.Point(77, 138);
             this.parametreadicombo.Name = "parametreadicombo";
             this.parametreadicombo.Size = new System.Drawing.Size(91, 21);

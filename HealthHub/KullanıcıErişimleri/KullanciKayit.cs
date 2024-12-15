@@ -63,7 +63,7 @@ namespace HealthHub
                 KULLANICILAR newUser = new KULLANICILAR
                 {
                     KullaniciAdi = KullaniciAdiKayit.Text,
-                    Parola = Parola.Text
+                    Parola = ParolaKayit.Text
                 };
 
                 // Model katmanındaki KullaniciEkle yöntemini çağır

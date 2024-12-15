@@ -28,42 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DoktorBransi = new System.Windows.Forms.ComboBox();
+            this.Doktor = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TarihVeSaat = new System.Windows.Forms.Label();
-            this.Brans = new System.Windows.Forms.Label();
+            this.hastasecimi = new System.Windows.Forms.Label();
             this.Doktorlar = new System.Windows.Forms.Label();
             this.MuayeneOlustur = new System.Windows.Forms.Button();
             this.Vazgec = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // DoktorBransi
+            // Doktor
             // 
-            this.DoktorBransi.FormattingEnabled = true;
-            this.DoktorBransi.Location = new System.Drawing.Point(326, 95);
-            this.DoktorBransi.Name = "DoktorBransi";
-            this.DoktorBransi.Size = new System.Drawing.Size(102, 21);
-            this.DoktorBransi.TabIndex = 0;
+            this.Doktor.FormattingEnabled = true;
+            this.Doktor.Location = new System.Drawing.Point(326, 95);
+            this.Doktor.Name = "Doktor";
+            this.Doktor.Size = new System.Drawing.Size(102, 21);
+            this.Doktor.TabIndex = 0;
+            this.Doktor.SelectedIndexChanged += new System.EventHandler(this.DoktorBransi_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(105, 28);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
             this.dateTimePicker1.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "KBB",
-            "Dahiliye",
-            "Kardiyoloji"});
-            this.comboBox1.Location = new System.Drawing.Point(105, 90);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
             // 
             // TarihVeSaat
             // 
@@ -74,14 +66,14 @@
             this.TarihVeSaat.TabIndex = 3;
             this.TarihVeSaat.Text = "Tarih ve Saat :";
             // 
-            // Brans
+            // hastasecimi
             // 
-            this.Brans.AutoSize = true;
-            this.Brans.Location = new System.Drawing.Point(12, 98);
-            this.Brans.Name = "Brans";
-            this.Brans.Size = new System.Drawing.Size(74, 13);
-            this.Brans.TabIndex = 4;
-            this.Brans.Text = "Branş Seçimi :";
+            this.hastasecimi.AutoSize = true;
+            this.hastasecimi.Location = new System.Drawing.Point(12, 98);
+            this.hastasecimi.Name = "hastasecimi";
+            this.hastasecimi.Size = new System.Drawing.Size(75, 13);
+            this.hastasecimi.TabIndex = 4;
+            this.hastasecimi.Text = "Hasta Seçimi :";
             // 
             // Doktorlar
             // 
@@ -100,6 +92,7 @@
             this.MuayeneOlustur.TabIndex = 6;
             this.MuayeneOlustur.Text = "Muayene Oluştur";
             this.MuayeneOlustur.UseVisualStyleBackColor = true;
+            this.MuayeneOlustur.Click += new System.EventHandler(this.MuayeneOlustur_Click);
             // 
             // Vazgec
             // 
@@ -111,20 +104,29 @@
             this.Vazgec.UseVisualStyleBackColor = true;
             this.Vazgec.Click += new System.EventHandler(this.Vazgec_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(105, 95);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // MuayeneEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 295);
             this.ControlBox = false;
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Vazgec);
             this.Controls.Add(this.MuayeneOlustur);
             this.Controls.Add(this.Doktorlar);
-            this.Controls.Add(this.Brans);
+            this.Controls.Add(this.hastasecimi);
             this.Controls.Add(this.TarihVeSaat);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.DoktorBransi);
+            this.Controls.Add(this.Doktor);
             this.Name = "MuayeneEkle";
             this.Text = "MuayeneEkle";
             this.Load += new System.EventHandler(this.MuayeneEkle_Load);
@@ -135,13 +137,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox DoktorBransi;
+        private System.Windows.Forms.ComboBox Doktor;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label TarihVeSaat;
-        private System.Windows.Forms.Label Brans;
+        private System.Windows.Forms.Label hastasecimi;
         private System.Windows.Forms.Label Doktorlar;
         private System.Windows.Forms.Button MuayeneOlustur;
         private System.Windows.Forms.Button Vazgec;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

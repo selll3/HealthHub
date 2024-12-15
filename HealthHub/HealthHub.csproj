@@ -208,10 +208,10 @@
     <Compile Include="KullanıcıErişimleri\KullanciKayit.Designer.cs">
       <DependentUpon>KullanciKayit.cs</DependentUpon>
     </Compile>
-    <Compile Include="HastaErişimiBulunan\MuayeneEkle.cs">
+    <Compile Include="PersonelErişimleri\MuayeneEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HastaErişimiBulunan\MuayeneEkle.Designer.cs">
+    <Compile Include="PersonelErişimleri\MuayeneEkle.Designer.cs">
       <DependentUpon>MuayeneEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="KullanıcıErişimleri\KullaniciAnaMenu.cs">
@@ -262,6 +262,12 @@
     <Compile Include="PersonelErişimleri\DoktorMuayeneleri.Designer.cs">
       <DependentUpon>DoktorMuayeneleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelErişimleri\MuayeneGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelErişimleri\MuayeneGuncelle.Designer.cs">
+      <DependentUpon>MuayeneGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelErişimleri\TumHastalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,10 +300,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HastaErişimiBulunan\Tahlillerim.cs">
+    <Compile Include="PersonelErişimleri\Tahlillerim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HastaErişimiBulunan\Tahlillerim.Designer.cs">
+    <Compile Include="PersonelErişimleri\Tahlillerim.Designer.cs">
       <DependentUpon>Tahlillerim.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Baslangic.resx">
@@ -312,10 +318,10 @@
     <EmbeddedResource Include="HastaErişimiBulunan\HastaKayit.resx">
       <DependentUpon>HastaKayit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HastaErişimiBulunan\MuayeneEkle.resx">
+    <EmbeddedResource Include="PersonelErişimleri\MuayeneEkle.resx">
       <DependentUpon>MuayeneEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HastaErişimiBulunan\Tahlillerim.resx">
+    <EmbeddedResource Include="PersonelErişimleri\Tahlillerim.resx">
       <DependentUpon>Tahlillerim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıErişimleri\KullanciKayit.resx">
@@ -345,6 +351,9 @@
     <EmbeddedResource Include="PersonelErişimleri\DoktorMuayeneleri.resx">
       <DependentUpon>DoktorMuayeneleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonelErişimleri\MuayeneGuncelle.resx">
+      <DependentUpon>MuayeneGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonelErişimleri\TumHastalar.resx">
       <DependentUpon>TumHastalar.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelErişimleri\TahlilGiris.resx">
       <DependentUpon>TahlilGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelErişimleri\TumMuayenelercs.resx">
+      <DependentUpon>TumMuayenelercs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -44,5 +44,36 @@ namespace HealthHub.PersonelErişimleri
           KullaniciAnaMenu kullaniciAnaMenu = new KullaniciAnaMenu();
             kullaniciAnaMenu.Show();
         }
+
+        private void DoktorMuayeneleri_Click(object sender, EventArgs e)
+        {
+            DoktorMuayeneleri dm = new DoktorMuayeneleri(currentUserId);
+            dm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TumMuayenelercs tm = new TumMuayenelercs();
+            tm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Tahlillerim t = new Tahlillerim();
+            t.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TahlilGiris tg = new TahlilGiris();
+            tg.Show();
+        }
+
+        private void Hastalar_Click(object sender, EventArgs e)
+        {
+            TumHastalar th = new TumHastalar(currentUserId);
+            th.Show();
+
+        }
     }
 }

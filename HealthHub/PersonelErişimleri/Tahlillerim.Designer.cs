@@ -30,7 +30,6 @@
         {
             this.Vazgec = new System.Windows.Forms.Button();
             this._Tahliller = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this._Tahliller)).BeginInit();
             this.SuspendLayout();
@@ -53,20 +52,10 @@
             this._Tahliller.Size = new System.Drawing.Size(328, 129);
             this._Tahliller.TabIndex = 9;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(265, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 29);
+            this.comboBox1.Location = new System.Drawing.Point(12, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(173, 21);
             this.comboBox1.TabIndex = 11;
@@ -79,7 +68,6 @@
             this.ClientSize = new System.Drawing.Size(446, 359);
             this.ControlBox = false;
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this._Tahliller);
             this.Controls.Add(this.Vazgec);
             this.Name = "Tahlillerim";
@@ -94,7 +82,6 @@
 
         private System.Windows.Forms.Button Vazgec;
         private System.Windows.Forms.DataGridView _Tahliller;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

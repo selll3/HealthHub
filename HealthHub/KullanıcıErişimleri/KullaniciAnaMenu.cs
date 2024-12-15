@@ -19,6 +19,14 @@ namespace HealthHub.KullanıcıErişimleri
 
         private void button1_Click(object sender, EventArgs e)
         {
+            PersonelKayit pk = new PersonelKayit();
+            pk.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            KullanciKayit kk = new KullanciKayit();
+            kk.Show();
 
         }
     }
