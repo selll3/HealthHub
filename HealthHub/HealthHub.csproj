@@ -172,9 +172,11 @@
     <Compile Include="Database\Entity\HASTALAR.cs" />
     <Compile Include="Database\Entity\HealthHubDb.cs" />
     <Compile Include="Database\Entity\KULLANICILAR.cs" />
+    <Compile Include="Database\Entity\LABORANTLAR.cs" />
     <Compile Include="Database\Entity\MUAYENELER.cs" />
     <Compile Include="Database\Entity\PERSONELFORMYETKILERI.cs" />
     <Compile Include="Database\Entity\PERSONELLER.cs" />
+    <Compile Include="Database\Entity\SEKRETERLER.cs" />
     <Compile Include="Database\Entity\TAHLIL.cs" />
     <Compile Include="Database\Entity\TAHLILDEGERLERI.cs" />
     <Compile Include="Database\Model\Doktorlar.cs" />

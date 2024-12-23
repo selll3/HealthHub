@@ -22,11 +22,17 @@ namespace HealthHub.Database.Entity
         public virtual DbSet<PERSONELLER> PERSONELLER { get; set; }
         public virtual DbSet<TAHLIL> TAHLIL { get; set; }
 
+        public virtual DbSet<SEKRETERLER> SEKRETERLER { get; set; }
+        public virtual DbSet<LABORANTLAR> LABORANTLAR { get; set; }
+
         public virtual DbSet<TAHLILDEGERLERI> TAHLILDEGERLERI {  get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TAHLILDEGERLERI>()
+        .Property(e => e.Deger)
+        .HasPrecision(10, 2);
         }
     }
 }

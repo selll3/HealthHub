@@ -30,10 +30,22 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this._Personel = new System.Windows.Forms.DataGridView();
             this._VAZGEC = new System.Windows.Forms.Button();
+            this._Personel = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this._Personel)).BeginInit();
             this.SuspendLayout();
+            // 
+            // _VAZGEC
+            // 
+            this._VAZGEC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this._VAZGEC.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this._VAZGEC.Location = new System.Drawing.Point(12, 287);
+            this._VAZGEC.Name = "_VAZGEC";
+            this._VAZGEC.Size = new System.Drawing.Size(75, 26);
+            this._VAZGEC.TabIndex = 1;
+            this._VAZGEC.Text = "VAZGEÇ";
+            this._VAZGEC.UseVisualStyleBackColor = false;
+            this._VAZGEC.Click += new System.EventHandler(this._VAZGEC_Click);
             // 
             // _Personel
             // 
@@ -66,18 +78,6 @@
             this._Personel.Size = new System.Drawing.Size(454, 251);
             this._Personel.TabIndex = 0;
             // 
-            // _VAZGEC
-            // 
-            this._VAZGEC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this._VAZGEC.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this._VAZGEC.Location = new System.Drawing.Point(12, 287);
-            this._VAZGEC.Name = "_VAZGEC";
-            this._VAZGEC.Size = new System.Drawing.Size(75, 26);
-            this._VAZGEC.TabIndex = 1;
-            this._VAZGEC.Text = "VAZGEÇ";
-            this._VAZGEC.UseVisualStyleBackColor = false;
-            this._VAZGEC.Click += new System.EventHandler(this._VAZGEC_Click);
-            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,8 +95,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView _Personel;
         private System.Windows.Forms.Button _VAZGEC;
+        private System.Windows.Forms.DataGridView _Personel;
     }
 }

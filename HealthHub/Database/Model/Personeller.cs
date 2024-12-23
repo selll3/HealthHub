@@ -4,13 +4,15 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using HealthHub.Database.Entity;
 
 namespace HealthHub.Database.Model
 {
-     public static class Personeller
+    public static class Personeller
     {
         public static HealthHubDb dp = new HealthHubDb();
+        public static HealthHubDb dpp = new HealthHubDb();
         public static string PersonelMiDoktorMu(int selectedPersonelId)
         {
 
@@ -47,6 +49,7 @@ namespace HealthHub.Database.Model
             return personeligetir;
 
         }
+
         public static bool PersonelEkle(PERSONELLER Personel)
         {
             try
@@ -70,6 +73,8 @@ namespace HealthHub.Database.Model
 
                 dp.Entry(Personel).State = EntityState.Modified; // Güncelleme durumunu belirt
                 dp.SaveChanges(); // Değişiklikleri kaydet
+     
+                
                 return true; // Güncelleme başarılı
 
             }
@@ -104,5 +109,6 @@ namespace HealthHub.Database.Model
 
             }
         }
+
     }
 }

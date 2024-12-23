@@ -103,9 +103,9 @@
             this.PersonelGorev.ForeColor = System.Drawing.Color.Black;
             this.PersonelGorev.FormattingEnabled = true;
             this.PersonelGorev.Items.AddRange(new object[] {
-            "Doktor",
-            "Sekreter",
-            "Hemşire"});
+            "DOKTOR\t",
+            "LABORANT",
+            "SEKRETER"});
             this.PersonelGorev.Location = new System.Drawing.Point(165, 159);
             this.PersonelGorev.Name = "PersonelGorev";
             this.PersonelGorev.Size = new System.Drawing.Size(138, 23);

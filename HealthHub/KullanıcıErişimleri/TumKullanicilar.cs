@@ -100,5 +100,36 @@ namespace HealthHub.KullanıcıErişimleri
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (TumKullancilar.SelectedRows.Count > 0)
+            {
+                int selectedRowId = Convert.ToInt32(TumKullancilar.SelectedRows[0].Cells["KULLANICIID"].Value); // ID sütununu kullanarak silme işlemi yapacağız
+
+                // Kullanıcıyı silme işlemi
+                bool silindi = Database.Model.Kullanicilar.KullaniciSil(selectedRowId);
+
+                if (silindi)
+                {
+                    MessageBox.Show("SİLME İŞLEMİ BAŞARIYLA TAMAMLANDI", "BİLGİLENDİRME", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Silme işlemi sırasında bir hata oluştu.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silinecek satırı seçin.");
+            }
+
+            LoadDatakullanici();
+        }
+
+        private void TumKullancilar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
