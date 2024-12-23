@@ -11,13 +11,13 @@ using HealthHub.Database.Model;
 
 namespace HealthHub.KullanıcıErişimleri
 {
-    public partial class Personeller : Form
+    public partial class TumPersoneller : Form
     {
         int currentUserId;
-        public Personeller(int userId)
+        public TumPersoneller(int userId)
         {
             currentUserId = userId;
-            LoadDataIntoGridp();
+            
             InitializeComponent();
            
         }
@@ -31,13 +31,13 @@ namespace HealthHub.KullanıcıErişimleri
 
                 if (personeller != null && personeller.Count > 0)
                 {
-                    _Personel.DataSource = personeller;
+                    dataGridView1.DataSource = personeller;
 
                     // Kolon başlıklarını ayarla (isteğe bağlı)
-                    _Personel.Columns["PERSONELID"].HeaderText = "Personel ID";
-                    _Personel.Columns["Ad"].HeaderText = "Ad";
-                    _Personel.Columns["Soyad"].HeaderText = "Soyad";
-                    _Personel.Columns["PersonelGörevi"].HeaderText = "Görev";
+                    dataGridView1.Columns["PERSONELID"].HeaderText = "Personel ID";
+                    dataGridView1.Columns["Ad"].HeaderText = "Ad";
+                    dataGridView1.Columns["Soyad"].HeaderText = "Soyad";
+                    dataGridView1.Columns["PersonelGörevi"].HeaderText = "Görev";
                 }
                 else
                 {
@@ -75,7 +75,7 @@ namespace HealthHub.KullanıcıErişimleri
                     control.Visible = true;
                 }
             }
-            _Personel.DataSource = Database.Model.Personeller.PersoneliGetir();
+            dataGridView1.DataSource = Database.Model.Personeller.PersoneliGetir();
             //_Personeller_dataGridView.DataSource = Database.Model.Personeller.dp.PERSONEL
             //   .Select(r => new
             //   {
@@ -93,7 +93,15 @@ namespace HealthHub.KullanıcıErişimleri
 
         private void Personeller_Load(object sender, EventArgs e)
         {
-            _Personel.RowHeadersVisible = false;
+            if (dataGridView1 == null)
+            {
+                MessageBox.Show("DataGridView başlatılamadı.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            LoadDataIntoGridp();
+
+            dataGridView1.RowHeadersVisible = false;
             
         }
 
@@ -109,6 +117,11 @@ namespace HealthHub.KullanıcıErişimleri
 
             // Formu kapat
             this.Close();
+        }
+
+        private void _Personel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

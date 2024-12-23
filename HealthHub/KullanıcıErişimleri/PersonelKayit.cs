@@ -95,7 +95,7 @@ namespace HealthHub
                 MessageBox.Show("Personel başarıyla eklendi.");
 
                 // İlk formu güncelle ve göster
-                var form1 = Application.OpenForms.OfType<Personeller>().FirstOrDefault();
+                var form1 = Application.OpenForms.OfType<TumPersoneller>().FirstOrDefault();
                 if (form1 != null)
                 {
                     form1.LoadDataIntoGridp();

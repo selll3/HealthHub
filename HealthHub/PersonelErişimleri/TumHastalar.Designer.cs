@@ -63,7 +63,6 @@
             this.Hasta.Location = new System.Drawing.Point(12, 12);
             this.Hasta.Name = "Hasta";
             this.Hasta.ReadOnly = true;
-            this.Hasta.RowHeadersVisible = false;
             this.Hasta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Hasta.Size = new System.Drawing.Size(370, 307);
             this.Hasta.TabIndex = 10;

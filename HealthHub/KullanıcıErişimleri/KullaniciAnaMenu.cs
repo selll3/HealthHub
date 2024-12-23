@@ -116,7 +116,7 @@ namespace HealthHub.KullanıcıErişimleri
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Personeller pers = new Personeller(currentUserId);
+            TumPersoneller pers = new TumPersoneller(currentUserId);
            pers.Show();
         }
 
