@@ -112,7 +112,7 @@ namespace HealthHub
                 if (mevcutMuayene != null)
                 {
                     // Eğer aynı doktor ve aynı saatte bir muayene varsa, eklemeyi engelle
-                    MessageBox.Show("Aynı doktorun aynı saatte başka bir muayenesi mevcut. Lütfen farklı bir saat seçin.");
+                    MessageBox.Show("Bu muayene daha önce zaten oluşturulmuş");
                     return;
                 }
 

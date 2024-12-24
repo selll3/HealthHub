@@ -17,6 +17,7 @@ namespace HealthHub
         public Tahlillerim()
         {
             InitializeComponent();
+           
         }
       
         private void FillComboSearchHasta()
@@ -54,7 +55,7 @@ namespace HealthHub
         private void Tahlillerim_Load(object sender, EventArgs e)
         {
             FillComboSearchHasta();
-         _Tahliller.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+         
 
         }
 
@@ -92,6 +93,7 @@ namespace HealthHub
 
                     // İşlenmiş tahlilleri DataGridView'e ata
                     _Tahliller.DataSource = tahlilListesi;
+                    _Tahliller.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 }
                 else
                 {

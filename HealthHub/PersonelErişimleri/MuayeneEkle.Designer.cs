@@ -93,7 +93,7 @@
             // 
             this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.MuayeneOlustur.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.MuayeneOlustur.Location = new System.Drawing.Point(184, 166);
+            this.MuayeneOlustur.Location = new System.Drawing.Point(9, 158);
             this.MuayeneOlustur.Name = "MuayeneOlustur";
             this.MuayeneOlustur.Size = new System.Drawing.Size(156, 28);
             this.MuayeneOlustur.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.Vazgec.Location = new System.Drawing.Point(9, 166);
+            this.Vazgec.Location = new System.Drawing.Point(262, 158);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 28);
             this.Vazgec.TabIndex = 7;

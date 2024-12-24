@@ -66,7 +66,7 @@
             // 
             this.kayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.kayit.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
-            this.kayit.Location = new System.Drawing.Point(225, 339);
+            this.kayit.Location = new System.Drawing.Point(8, 339);
             this.kayit.Name = "kayit";
             this.kayit.Size = new System.Drawing.Size(78, 31);
             this.kayit.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Vazgec.Location = new System.Drawing.Point(6, 339);
+            this.Vazgec.Location = new System.Drawing.Point(225, 339);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 31);
             this.Vazgec.TabIndex = 9;

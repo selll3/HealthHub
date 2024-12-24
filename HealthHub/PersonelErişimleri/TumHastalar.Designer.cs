@@ -66,6 +66,7 @@
             this.Hasta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Hasta.Size = new System.Drawing.Size(370, 307);
             this.Hasta.TabIndex = 10;
+            this.Hasta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Hasta_CellContentClick);
             // 
             // TumHastalar
             // 

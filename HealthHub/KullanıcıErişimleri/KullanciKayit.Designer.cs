@@ -41,7 +41,7 @@
             // 
             this.KullaniciKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.KullaniciKayit.Font = new System.Drawing.Font("Showcard Gothic", 9F);
-            this.KullaniciKayit.Location = new System.Drawing.Point(280, 82);
+            this.KullaniciKayit.Location = new System.Drawing.Point(2, 82);
             this.KullaniciKayit.Name = "KullaniciKayit";
             this.KullaniciKayit.Size = new System.Drawing.Size(75, 23);
             this.KullaniciKayit.TabIndex = 9;
@@ -92,7 +92,7 @@
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Vazgec.Font = new System.Drawing.Font("Showcard Gothic", 9F);
-            this.Vazgec.Location = new System.Drawing.Point(2, 83);
+            this.Vazgec.Location = new System.Drawing.Point(277, 82);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 22);
             this.Vazgec.TabIndex = 10;

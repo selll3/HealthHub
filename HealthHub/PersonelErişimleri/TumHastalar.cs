@@ -91,5 +91,10 @@ namespace HealthHub.PersonelErişimleri
         {
 
         }
+
+        private void Hasta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

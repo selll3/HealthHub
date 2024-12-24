@@ -49,7 +49,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(4, 282);
+            this.button1.Location = new System.Drawing.Point(437, 288);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 31);
             this.button1.TabIndex = 16;
@@ -81,7 +81,7 @@
             // 
             this.Kaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Kaydet.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Kaydet.Location = new System.Drawing.Point(431, 282);
+            this.Kaydet.Location = new System.Drawing.Point(12, 288);
             this.Kaydet.Name = "Kaydet";
             this.Kaydet.Size = new System.Drawing.Size(93, 31);
             this.Kaydet.TabIndex = 34;
