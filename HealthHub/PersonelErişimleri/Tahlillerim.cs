@@ -54,6 +54,8 @@ namespace HealthHub
         private void Tahlillerim_Load(object sender, EventArgs e)
         {
             FillComboSearchHasta();
+         _Tahliller.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

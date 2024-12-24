@@ -28,10 +28,9 @@ namespace HealthHub.PersonelErişimleri
             string kullaniciAdi = KullaniciAdi.Text;
             string parola = Parola.Text;
 
-            // LINQ kullanarak veritabanında kullanıcı sorgulama
             var kullanici = hb.KULLANICILAR
-                .Where(g => g.KullaniciAdi == kullaniciAdi && g.Parola == parola) // Büyük/küçük harf duyarlı eşleşme
-                .FirstOrDefault();
+                .FirstOrDefault(g => g.KullaniciAdi.Equals(kullaniciAdi, StringComparison.Ordinal)
+                                  && g.Parola.Equals(parola, StringComparison.Ordinal)); // Büyük/küçük harf duyarlılığı sağlanır
 
             if (kullanici != null)
             {
@@ -48,9 +47,11 @@ namespace HealthHub.PersonelErişimleri
             {
                 MessageBox.Show("Kullanıcı adı veya şifre hatalı.");
             }
+
+
         }
 
-
+        // SELİNAY SEN PERSONEL GİRİŞ DE KÜÇÜK BÜYÜK HARF AYRIMINA DİKKAT EDEREK GİRİŞ YAPMAYI DÜZELT
         private void PersonelGiris_Load(object sender, EventArgs e)
         {
 

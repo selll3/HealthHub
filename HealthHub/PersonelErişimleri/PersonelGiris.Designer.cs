@@ -43,7 +43,7 @@
             this.Parola.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Parola.Location = new System.Drawing.Point(103, 44);
             this.Parola.Name = "Parola";
-            this.Parola.PasswordChar = '#';
+            this.Parola.PasswordChar = '*';
             this.Parola.Size = new System.Drawing.Size(138, 22);
             this.Parola.TabIndex = 17;
             // 
