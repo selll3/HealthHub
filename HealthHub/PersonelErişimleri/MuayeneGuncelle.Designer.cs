@@ -71,7 +71,7 @@
             // 
             this.KAYDET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.KAYDET.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.KAYDET.Location = new System.Drawing.Point(6, 156);
+            this.KAYDET.Location = new System.Drawing.Point(283, 159);
             this.KAYDET.Name = "KAYDET";
             this.KAYDET.Size = new System.Drawing.Size(75, 27);
             this.KAYDET.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.button2.Location = new System.Drawing.Point(241, 156);
+            this.button2.Location = new System.Drawing.Point(6, 159);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 27);
             this.button2.TabIndex = 4;
@@ -94,30 +94,30 @@
             // Doktorlar
             // 
             this.Doktorlar.AutoSize = true;
-            this.Doktorlar.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Doktorlar.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Doktorlar.Location = new System.Drawing.Point(3, 100);
             this.Doktorlar.Name = "Doktorlar";
-            this.Doktorlar.Size = new System.Drawing.Size(89, 16);
+            this.Doktorlar.Size = new System.Drawing.Size(78, 18);
             this.Doktorlar.TabIndex = 8;
             this.Doktorlar.Text = "Doktorlar :";
             // 
             // hastasecimi
             // 
             this.hastasecimi.AutoSize = true;
-            this.hastasecimi.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.hastasecimi.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.hastasecimi.Location = new System.Drawing.Point(3, 54);
             this.hastasecimi.Name = "hastasecimi";
-            this.hastasecimi.Size = new System.Drawing.Size(101, 16);
+            this.hastasecimi.Size = new System.Drawing.Size(96, 18);
             this.hastasecimi.TabIndex = 7;
             this.hastasecimi.Text = "Hasta Seçimi :";
             // 
             // TarihVeSaat
             // 
             this.TarihVeSaat.AutoSize = true;
-            this.TarihVeSaat.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.TarihVeSaat.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.TarihVeSaat.Location = new System.Drawing.Point(3, 9);
             this.TarihVeSaat.Name = "TarihVeSaat";
-            this.TarihVeSaat.Size = new System.Drawing.Size(107, 16);
+            this.TarihVeSaat.Size = new System.Drawing.Size(99, 18);
             this.TarihVeSaat.TabIndex = 6;
             this.TarihVeSaat.Text = "Tarih ve Saat :";
             // 

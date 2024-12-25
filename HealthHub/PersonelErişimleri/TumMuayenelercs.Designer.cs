@@ -72,7 +72,7 @@
             // vazgec
             // 
             this.vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.vazgec.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.vazgec.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.vazgec.Location = new System.Drawing.Point(12, 294);
             this.vazgec.Name = "vazgec";
             this.vazgec.Size = new System.Drawing.Size(75, 34);
@@ -85,7 +85,7 @@
             // 
             this.GUNCELLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.GUNCELLE.Enabled = false;
-            this.GUNCELLE.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GUNCELLE.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.GUNCELLE.Location = new System.Drawing.Point(124, 294);
             this.GUNCELLE.Name = "GUNCELLE";
             this.GUNCELLE.Size = new System.Drawing.Size(89, 34);
@@ -98,7 +98,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(255, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
@@ -111,7 +111,7 @@
             // 
             this.EKLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.EKLE.Enabled = false;
-            this.EKLE.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Bold);
+            this.EKLE.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.EKLE.Location = new System.Drawing.Point(370, 294);
             this.EKLE.Name = "EKLE";
             this.EKLE.Size = new System.Drawing.Size(75, 34);

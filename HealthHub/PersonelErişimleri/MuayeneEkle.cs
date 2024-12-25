@@ -141,5 +141,10 @@ namespace HealthHub
                 MessageBox.Show($"Bir hata oluştu: {ex.Message}");
             }
         }
+
+        private void _doktorSaatleri_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

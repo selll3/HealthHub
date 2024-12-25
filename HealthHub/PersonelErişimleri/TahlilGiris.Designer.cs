@@ -49,7 +49,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(437, 288);
+            this.button1.Location = new System.Drawing.Point(320, 285);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 31);
             this.button1.TabIndex = 16;
@@ -70,10 +70,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label4.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(1, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 16);
+            this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 24;
             this.label4.Text = "Hasta Bilgisi :";
             // 
@@ -81,9 +81,9 @@
             // 
             this.Kaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Kaydet.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Kaydet.Location = new System.Drawing.Point(12, 288);
+            this.Kaydet.Location = new System.Drawing.Point(433, 285);
             this.Kaydet.Name = "Kaydet";
-            this.Kaydet.Size = new System.Drawing.Size(93, 31);
+            this.Kaydet.Size = new System.Drawing.Size(91, 31);
             this.Kaydet.TabIndex = 34;
             this.Kaydet.Text = "KAYDET";
             this.Kaydet.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             "Kan Tahlili"});
             this.tahililismicombo.Location = new System.Drawing.Point(111, 75);
             this.tahililismicombo.Name = "tahililismicombo";
-            this.tahililismicombo.Size = new System.Drawing.Size(91, 23);
+            this.tahililismicombo.Size = new System.Drawing.Size(121, 23);
             this.tahililismicombo.TabIndex = 35;
             // 
             // parametreadicombo
@@ -114,7 +114,7 @@
             "Kolesterol"});
             this.parametreadicombo.Location = new System.Drawing.Point(111, 141);
             this.parametreadicombo.Name = "parametreadicombo";
-            this.parametreadicombo.Size = new System.Drawing.Size(91, 23);
+            this.parametreadicombo.Size = new System.Drawing.Size(121, 23);
             this.parametreadicombo.TabIndex = 36;
             // 
             // degercombo
@@ -123,36 +123,36 @@
             this.degercombo.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.degercombo.Location = new System.Drawing.Point(111, 198);
             this.degercombo.Name = "degercombo";
-            this.degercombo.Size = new System.Drawing.Size(91, 22);
+            this.degercombo.Size = new System.Drawing.Size(121, 22);
             this.degercombo.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(1, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.Size = new System.Drawing.Size(83, 18);
             this.label1.TabIndex = 38;
             this.label1.Text = "Tahlil İsmi :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(1, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 16);
+            this.label2.Size = new System.Drawing.Size(104, 18);
             this.label2.TabIndex = 39;
             this.label2.Text = "Parametre Adı:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(1, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 40;
             this.label3.Text = "Değer :";
             // 

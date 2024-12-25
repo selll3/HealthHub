@@ -40,7 +40,7 @@
             // Vazgec
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Vazgec.Location = new System.Drawing.Point(12, 319);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 31);
@@ -53,7 +53,7 @@
             // 
             this.DoktorMuayeneleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.DoktorMuayeneleri.Enabled = false;
-            this.DoktorMuayeneleri.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.DoktorMuayeneleri.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.DoktorMuayeneleri.Location = new System.Drawing.Point(12, 12);
             this.DoktorMuayeneleri.Name = "DoktorMuayeneleri";
             this.DoktorMuayeneleri.Size = new System.Drawing.Size(235, 28);
@@ -66,7 +66,7 @@
             // 
             this.Hastalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.Hastalar.Enabled = false;
-            this.Hastalar.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Hastalar.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Hastalar.Location = new System.Drawing.Point(12, 105);
             this.Hastalar.Name = "Hastalar";
             this.Hastalar.Size = new System.Drawing.Size(235, 28);
@@ -79,12 +79,12 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.button3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.button3.Location = new System.Drawing.Point(12, 201);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(235, 28);
             this.button3.TabIndex = 12;
-            this.button3.Text = "TAHLIL VERILERININ KAYDI\r\n";
+            this.button3.Text = "Tahlil Verilerinin kaydı";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -92,12 +92,12 @@
             // 
             this._KullaniciIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this._KullaniciIslemleri.Enabled = false;
-            this._KullaniciIslemleri.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this._KullaniciIslemleri.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this._KullaniciIslemleri.Location = new System.Drawing.Point(12, 256);
             this._KullaniciIslemleri.Name = "_KullaniciIslemleri";
             this._KullaniciIslemleri.Size = new System.Drawing.Size(235, 27);
             this._KullaniciIslemleri.TabIndex = 13;
-            this._KullaniciIslemleri.Text = "KULLANICI ISLEMLERI";
+            this._KullaniciIslemleri.Text = "Kullanıcı İşlemleri";
             this._KullaniciIslemleri.UseVisualStyleBackColor = false;
             this._KullaniciIslemleri.Click += new System.EventHandler(this._KullaniciIslemleri_Click);
             // 
@@ -105,7 +105,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.button1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(12, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(235, 28);
@@ -118,7 +118,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.button2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(9, 155);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(238, 28);

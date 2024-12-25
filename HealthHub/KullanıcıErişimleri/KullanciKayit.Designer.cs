@@ -71,20 +71,20 @@
             // Parola
             // 
             this.Parola.AutoSize = true;
-            this.Parola.Font = new System.Drawing.Font("Showcard Gothic", 9F);
+            this.Parola.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Parola.Location = new System.Drawing.Point(-1, 40);
             this.Parola.Name = "Parola";
-            this.Parola.Size = new System.Drawing.Size(58, 15);
+            this.Parola.Size = new System.Drawing.Size(57, 18);
             this.Parola.TabIndex = 6;
             this.Parola.Text = "Parola :";
             // 
             // KullaniciAdi
             // 
             this.KullaniciAdi.AutoSize = true;
-            this.KullaniciAdi.Font = new System.Drawing.Font("Showcard Gothic", 9F);
+            this.KullaniciAdi.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.KullaniciAdi.Location = new System.Drawing.Point(-1, 9);
             this.KullaniciAdi.Name = "KullaniciAdi";
-            this.KullaniciAdi.Size = new System.Drawing.Size(100, 15);
+            this.KullaniciAdi.Size = new System.Drawing.Size(98, 18);
             this.KullaniciAdi.TabIndex = 5;
             this.KullaniciAdi.Text = "Kullanıcı Adı :";
             // 
@@ -104,10 +104,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            this.checkBox1.Font = new System.Drawing.Font("Showcard Gothic", 9F);
+            this.checkBox1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.checkBox1.Location = new System.Drawing.Point(243, 43);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 19);
+            this.checkBox1.Size = new System.Drawing.Size(108, 22);
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "Parolayı Gör";
             this.checkBox1.UseVisualStyleBackColor = false;

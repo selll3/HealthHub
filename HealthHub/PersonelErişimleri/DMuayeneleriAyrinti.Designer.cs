@@ -74,6 +74,7 @@
             this.textBoxTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.textBoxTC.Location = new System.Drawing.Point(12, 12);
             this.textBoxTC.Name = "textBoxTC";
+            this.textBoxTC.ReadOnly = true;
             this.textBoxTC.Size = new System.Drawing.Size(163, 20);
             this.textBoxTC.TabIndex = 1;
             // 
@@ -82,6 +83,7 @@
             this._ad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this._ad.Location = new System.Drawing.Point(12, 48);
             this._ad.Name = "_ad";
+            this._ad.ReadOnly = true;
             this._ad.Size = new System.Drawing.Size(163, 20);
             this._ad.TabIndex = 2;
             // 
@@ -90,6 +92,7 @@
             this._soyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this._soyad.Location = new System.Drawing.Point(12, 88);
             this._soyad.Name = "_soyad";
+            this._soyad.ReadOnly = true;
             this._soyad.Size = new System.Drawing.Size(163, 20);
             this._soyad.TabIndex = 3;
             // 

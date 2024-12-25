@@ -36,6 +36,8 @@
             this.MuayeneOlustur = new System.Windows.Forms.Button();
             this.Vazgec = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this._doktorSaatleri = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Doktor
@@ -62,38 +64,38 @@
             // TarihVeSaat
             // 
             this.TarihVeSaat.AutoSize = true;
-            this.TarihVeSaat.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.TarihVeSaat.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.TarihVeSaat.Location = new System.Drawing.Point(6, 9);
             this.TarihVeSaat.Name = "TarihVeSaat";
-            this.TarihVeSaat.Size = new System.Drawing.Size(107, 16);
+            this.TarihVeSaat.Size = new System.Drawing.Size(99, 18);
             this.TarihVeSaat.TabIndex = 3;
             this.TarihVeSaat.Text = "Tarih ve Saat :";
             // 
             // hastasecimi
             // 
             this.hastasecimi.AutoSize = true;
-            this.hastasecimi.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.hastasecimi.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.hastasecimi.Location = new System.Drawing.Point(6, 55);
             this.hastasecimi.Name = "hastasecimi";
-            this.hastasecimi.Size = new System.Drawing.Size(101, 16);
+            this.hastasecimi.Size = new System.Drawing.Size(96, 18);
             this.hastasecimi.TabIndex = 4;
             this.hastasecimi.Text = "Hasta Seçimi :";
             // 
             // Doktorlar
             // 
             this.Doktorlar.AutoSize = true;
-            this.Doktorlar.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.Doktorlar.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Doktorlar.Location = new System.Drawing.Point(6, 108);
             this.Doktorlar.Name = "Doktorlar";
-            this.Doktorlar.Size = new System.Drawing.Size(89, 16);
+            this.Doktorlar.Size = new System.Drawing.Size(78, 18);
             this.Doktorlar.TabIndex = 5;
             this.Doktorlar.Text = "Doktorlar :";
             // 
             // MuayeneOlustur
             // 
             this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.MuayeneOlustur.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.MuayeneOlustur.Location = new System.Drawing.Point(9, 158);
+            this.MuayeneOlustur.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.MuayeneOlustur.Location = new System.Drawing.Point(184, 150);
             this.MuayeneOlustur.Name = "MuayeneOlustur";
             this.MuayeneOlustur.Size = new System.Drawing.Size(156, 28);
             this.MuayeneOlustur.TabIndex = 6;
@@ -104,8 +106,8 @@
             // Vazgec
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.Vazgec.Location = new System.Drawing.Point(262, 158);
+            this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Vazgec.Location = new System.Drawing.Point(9, 150);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 28);
             this.Vazgec.TabIndex = 7;
@@ -123,12 +125,32 @@
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // _doktorSaatleri
+            // 
+            this._doktorSaatleri.Location = new System.Drawing.Point(458, 104);
+            this._doktorSaatleri.Name = "_doktorSaatleri";
+            this._doktorSaatleri.Size = new System.Drawing.Size(125, 20);
+            this._doktorSaatleri.TabIndex = 9;
+            this._doktorSaatleri.TextChanged += new System.EventHandler(this._doktorSaatleri_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(276, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Seçilen Doktorun Saatleri :";
+            // 
             // MuayeneEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 242);
+            this.ClientSize = new System.Drawing.Size(737, 252);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this._doktorSaatleri);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Vazgec);
             this.Controls.Add(this.MuayeneOlustur);
@@ -155,5 +177,7 @@
         private System.Windows.Forms.Button MuayeneOlustur;
         private System.Windows.Forms.Button Vazgec;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox _doktorSaatleri;
+        private System.Windows.Forms.Label label1;
     }
 }

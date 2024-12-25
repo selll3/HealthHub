@@ -59,44 +59,45 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(281, 106);
+            this.button1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(6, 106);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 22);
+            this.button1.Size = new System.Drawing.Size(95, 31);
             this.button1.TabIndex = 15;
             this.button1.Text = "VAZGEÇ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Giris
             // 
             this.Giris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Giris.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Giris.Location = new System.Drawing.Point(6, 106);
+            this.Giris.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Giris.Location = new System.Drawing.Point(263, 105);
             this.Giris.Name = "Giris";
-            this.Giris.Size = new System.Drawing.Size(78, 23);
+            this.Giris.Size = new System.Drawing.Size(92, 32);
             this.Giris.TabIndex = 14;
-            this.Giris.Text = "GIRIS YAP";
+            this.Giris.Text = "GİRİŞ YAP";
             this.Giris.UseVisualStyleBackColor = false;
             this.Giris.Click += new System.EventHandler(this.Giris_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(3, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 13;
             this.label2.Text = "Parola :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 15);
+            this.label1.Size = new System.Drawing.Size(98, 18);
             this.label1.TabIndex = 12;
             this.label1.Text = "Kullanıcı Adı :";
             // 
@@ -104,10 +105,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            this.checkBox1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.checkBox1.Location = new System.Drawing.Point(247, 46);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 19);
+            this.checkBox1.Size = new System.Drawing.Size(108, 22);
             this.checkBox1.TabIndex = 18;
             this.checkBox1.Text = "Parolayı Gör";
             this.checkBox1.UseVisualStyleBackColor = false;
