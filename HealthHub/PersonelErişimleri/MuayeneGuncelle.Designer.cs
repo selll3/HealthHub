@@ -36,6 +36,8 @@
             this.Doktorlar = new System.Windows.Forms.Label();
             this.hastasecimi = new System.Windows.Forms.Label();
             this.TarihVeSaat = new System.Windows.Forms.Label();
+            this._DoktorunSaatleri = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBoxDoktor
@@ -71,7 +73,7 @@
             // 
             this.KAYDET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.KAYDET.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.KAYDET.Location = new System.Drawing.Point(283, 159);
+            this.KAYDET.Location = new System.Drawing.Point(452, 159);
             this.KAYDET.Name = "KAYDET";
             this.KAYDET.Size = new System.Drawing.Size(75, 27);
             this.KAYDET.TabIndex = 3;
@@ -121,12 +123,32 @@
             this.TarihVeSaat.TabIndex = 6;
             this.TarihVeSaat.Text = "Tarih ve Saat :";
             // 
+            // _DoktorunSaatleri
+            // 
+            this._DoktorunSaatleri.FormattingEnabled = true;
+            this._DoktorunSaatleri.Location = new System.Drawing.Point(427, 97);
+            this._DoktorunSaatleri.Name = "_DoktorunSaatleri";
+            this._DoktorunSaatleri.Size = new System.Drawing.Size(118, 21);
+            this._DoktorunSaatleri.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(245, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Seçilen Doktorun Saatleri :";
+            // 
             // MuayeneGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 336);
+            this.ClientSize = new System.Drawing.Size(598, 336);
             this.ControlBox = false;
+            this.Controls.Add(this._DoktorunSaatleri);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Doktorlar);
             this.Controls.Add(this.hastasecimi);
             this.Controls.Add(this.TarihVeSaat);
@@ -153,5 +175,7 @@
         private System.Windows.Forms.Label Doktorlar;
         private System.Windows.Forms.Label hastasecimi;
         private System.Windows.Forms.Label TarihVeSaat;
+        private System.Windows.Forms.ComboBox _DoktorunSaatleri;
+        private System.Windows.Forms.Label label1;
     }
 }

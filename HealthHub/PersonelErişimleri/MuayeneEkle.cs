@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using HealthHub.Database.Model;
 using HealthHub.Database.Entity;
+using System.Windows.Forms.VisualStyles;
 
 namespace HealthHub
 {
@@ -89,51 +90,66 @@ namespace HealthHub
 
         }
 
-        private void DoktorBransi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void MuayeneOlustur_Click(object sender, EventArgs e)
         {
             try
             {
                 // ComboBox'lardan seçilen hasta ve doktor ID'lerini al
-                int hastaID = Convert.ToInt32(comboBox1.SelectedValue);
-                int doktorID = Convert.ToInt32(Doktor.SelectedValue);
-
-                // DateTimePicker'dan seçilen tarihi al
-                DateTime tarihSaat = dateTimePicker1.Value;
-
-                // Aynı doktor ve aynı saatte bir muayene var mı kontrol et
-                var mevcutMuayene = Database.Model.Muayeneler.dbm.MUAYENELER
-                    .FirstOrDefault(m => m.DOKTORID == doktorID && m.TarihSaat == tarihSaat);
-
-                if (mevcutMuayene != null)
+                if (comboBox1.SelectedValue is int hastaID &&
+                    Doktor.SelectedValue is int doktorID &&
+                    _DoktorunSaatleri.SelectedItem is string selectedSaat)
                 {
-                    // Eğer aynı doktor ve aynı saatte bir muayene varsa, eklemeyi engelle
-                    MessageBox.Show("Bu muayene daha önce zaten oluşturulmuş");
-                    return;
-                }
+                    // Seçilen tarih
+                    DateTime selectedDate = dateTimePicker1.Value.Date;
 
-                // Yeni muayene nesnesi oluştur
-                MUAYENELER yeniMuayene = new MUAYENELER
-                {
-                    HASTAID = hastaID,
-                    DOKTORID = doktorID,
-                    TarihSaat = tarihSaat
-                };
+                    using (var context = new HealthHubDb())
+                    {
+                        // Seçilen saat doktorun çalışma saatleri içinde mi kontrol et
+                        var doktorSaatleri = context.DOKTOR_SAATLERI
+                            .Where(ds => ds.DOKTORID == doktorID && ds.TARIH == selectedDate && ds.AKTIF == true)
+                            .Select(ds => ds.SAAT)
+                            .ToList();
 
-                // Veritabanına kaydet
-                bool result = Muayeneler.MuayeneEkle(yeniMuayene);
+                        if (!doktorSaatleri.Contains(selectedSaat))
+                        {
+                            MessageBox.Show("Seçilen saat doktorun çalışma saatleri içinde değil!");
+                            return;
+                        }
 
-                if (result)
-                {
+                        // Seçilen saatte doktorun başka bir muayenesi var mı kontrol et
+                        DateTime selectedTarihSaat = DateTime.Parse($"{selectedDate:yyyy-MM-dd} {selectedSaat}");
+                        var mevcutMuayene = context.MUAYENELER
+                            .FirstOrDefault(m => m.DOKTORID == doktorID && m.TarihSaat == selectedTarihSaat);
+
+                        if (mevcutMuayene != null)
+                        {
+                            MessageBox.Show("Seçilen saatte doktorun başka bir muayenesi zaten bulunuyor!");
+                            return;
+                        }
+                    }
+
+                    // Yeni muayene oluşturma kodu
+                    MUAYENELER yeniMuayene = new MUAYENELER
+                    {
+                        HASTAID = hastaID,
+                        DOKTORID = doktorID,
+                        TarihSaat = DateTime.Parse($"{selectedDate:yyyy-MM-dd} {selectedSaat}")
+                    };
+
+                    // Veritabanına kaydet
+                    using (var context = new HealthHubDb())
+                    {
+                        context.MUAYENELER.Add(yeniMuayene);
+                        context.SaveChanges();
+                    }
+
                     MessageBox.Show("Muayene başarıyla oluşturuldu!");
                 }
                 else
                 {
-                    MessageBox.Show("Muayene oluşturulurken bir hata oluştu!");
+                    MessageBox.Show("Lütfen tüm seçimleri doğru bir şekilde yapın!");
                 }
             }
             catch (Exception ex)
@@ -141,9 +157,51 @@ namespace HealthHub
                 MessageBox.Show($"Bir hata oluştu: {ex.Message}");
             }
         }
+        private void FillComboDoktorSaatleri(int selectedDoktorID, DateTime selectedDate)
+        {
+            using (var context = new HealthHubDb())
+            {
+                // Veritabanından saatleri çek
+                var doktorSaatleri = context.DOKTOR_SAATLERI
+     .Where(ds => ds.DOKTORID == selectedDoktorID && ds.TARIH == selectedDate && ds.AKTIF == true)
+     .Select(ds => ds.SAAT)
+     .ToList();
+
+                // Saatleri ComboBox'a doldur
+                _DoktorunSaatleri.DataSource = doktorSaatleri;
+            }
+        }
+
 
         private void _doktorSaatleri_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Doktor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (Doktor.SelectedValue != null)
+            {
+                // Seçilen doktor ID'sini al
+                if (int.TryParse(Doktor.SelectedValue.ToString(), out int selectedDoktorID))
+                {
+                    // DateTimePicker'dan seçilen tarihi al
+                    DateTime selectedDate = dateTimePicker1.Value.Date;
+
+                    // Doktorun saatlerini doldur
+                    FillComboDoktorSaatleri(selectedDoktorID, selectedDate);
+                }
+                else
+                {
+                    MessageBox.Show("Seçilen doktor ID'si geçerli bir sayı değil.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bir doktor seçilmedi.");
+            }
+
 
         }
     }

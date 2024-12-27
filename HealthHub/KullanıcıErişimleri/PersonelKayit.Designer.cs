@@ -102,10 +102,6 @@
             this.PersonelGorev.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.PersonelGorev.ForeColor = System.Drawing.Color.Black;
             this.PersonelGorev.FormattingEnabled = true;
-            this.PersonelGorev.Items.AddRange(new object[] {
-            "DOKTOR\t",
-            "LABORANT",
-            "SEKRETER"});
             this.PersonelGorev.Location = new System.Drawing.Point(147, 163);
             this.PersonelGorev.Name = "PersonelGorev";
             this.PersonelGorev.Size = new System.Drawing.Size(138, 23);

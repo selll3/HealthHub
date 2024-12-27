@@ -36,8 +36,8 @@
             this.MuayeneOlustur = new System.Windows.Forms.Button();
             this.Vazgec = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this._doktorSaatleri = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this._DoktorunSaatleri = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Doktor
@@ -48,7 +48,7 @@
             this.Doktor.Name = "Doktor";
             this.Doktor.Size = new System.Drawing.Size(121, 21);
             this.Doktor.TabIndex = 0;
-            this.Doktor.SelectedIndexChanged += new System.EventHandler(this.DoktorBransi_SelectedIndexChanged);
+            this.Doktor.SelectedIndexChanged += new System.EventHandler(this.Doktor_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -95,7 +95,7 @@
             // 
             this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.MuayeneOlustur.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.MuayeneOlustur.Location = new System.Drawing.Point(184, 150);
+            this.MuayeneOlustur.Location = new System.Drawing.Point(445, 150);
             this.MuayeneOlustur.Name = "MuayeneOlustur";
             this.MuayeneOlustur.Size = new System.Drawing.Size(156, 28);
             this.MuayeneOlustur.TabIndex = 6;
@@ -125,14 +125,6 @@
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // _doktorSaatleri
-            // 
-            this._doktorSaatleri.Location = new System.Drawing.Point(458, 104);
-            this._doktorSaatleri.Name = "_doktorSaatleri";
-            this._doktorSaatleri.Size = new System.Drawing.Size(125, 20);
-            this._doktorSaatleri.TabIndex = 9;
-            this._doktorSaatleri.TextChanged += new System.EventHandler(this._doktorSaatleri_TextChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -143,14 +135,22 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Seçilen Doktorun Saatleri :";
             // 
+            // _DoktorunSaatleri
+            // 
+            this._DoktorunSaatleri.FormattingEnabled = true;
+            this._DoktorunSaatleri.Location = new System.Drawing.Point(458, 108);
+            this._DoktorunSaatleri.Name = "_DoktorunSaatleri";
+            this._DoktorunSaatleri.Size = new System.Drawing.Size(143, 21);
+            this._DoktorunSaatleri.TabIndex = 11;
+            // 
             // MuayeneEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 252);
             this.ControlBox = false;
+            this.Controls.Add(this._DoktorunSaatleri);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this._doktorSaatleri);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Vazgec);
             this.Controls.Add(this.MuayeneOlustur);
@@ -177,7 +177,7 @@
         private System.Windows.Forms.Button MuayeneOlustur;
         private System.Windows.Forms.Button Vazgec;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox _doktorSaatleri;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox _DoktorunSaatleri;
     }
 }

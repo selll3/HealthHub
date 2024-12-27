@@ -14,6 +14,7 @@ namespace HealthHub.Database.Entity
         }
 
         public virtual DbSet<DOKTORLAR> DOKTORLAR { get; set; }
+        public virtual DbSet<DOKTOR_SAATLERI> DOKTOR_SAATLERI { get; set; }
         public virtual DbSet<FORMLAR> FORMLAR { get; set; }
         public virtual DbSet<HASTALAR> HASTALAR { get; set; }
         public virtual DbSet<KULLANICILAR> KULLANICILAR { get; set; }
@@ -30,6 +31,10 @@ namespace HealthHub.Database.Entity
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<DOKTOR_SAATLERI>()
+          .Property(e => e.SAAT)
+          .IsUnicode(false);
+
             modelBuilder.Entity<TAHLILDEGERLERI>()
         .Property(e => e.Deger)
         .HasPrecision(10, 2);

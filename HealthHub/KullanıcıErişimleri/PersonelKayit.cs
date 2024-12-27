@@ -1,4 +1,5 @@
 ﻿using HealthHub.Database.Entity;
+using HealthHub.Database.Model;
 using HealthHub.KullanıcıErişimleri;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+
 
 namespace HealthHub
 {
     public partial class PersonelKayit : Form
-    {
+    { HealthHubDb dpm = new HealthHubDb();
         public PersonelKayit()
         {
             InitializeComponent();
@@ -37,6 +39,12 @@ namespace HealthHub
         private void PersonelKayit_Load(object sender, EventArgs e)
         {
             FillComboSeachCode();
+            FillComboBox();
+        }
+        private void FillComboBox()
+        {
+            List<string> görevler = new List<string> { "DOKTOR", "LABORANT", "SEKRETER" };
+            PersonelGorev.DataSource = görevler;
         }
 
         private void kayit_Click(object sender, EventArgs e)
@@ -44,7 +52,7 @@ namespace HealthHub
             bool isAnyEmpty = false;
             foreach (Control control in this.Controls)
             {
-                if (control is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(control.Text))
+                if (control is TextBox && string.IsNullOrWhiteSpace(control.Text))
                 {
                     isAnyEmpty = true;
                     break;
@@ -57,11 +65,11 @@ namespace HealthHub
                 return;
             }
 
-            using (var context = new HealthHubDb()) // Entity Framework DbContext sınıfı
-            {
+            // Entity Framework DbContext sınıfı
+            
                 // Aynı kullanıcı zaten atanmış mı kontrol etmek için sorgu
                 var kullaniciId = (int)HangiKullanici.SelectedValue;
-                bool kullaniciZatenAtanmis = context.PERSONELLER.Any(p => p.KULLANICIID == kullaniciId);
+                bool kullaniciZatenAtanmis = dpm.PERSONELLER.Any(p => p.KULLANICIID == kullaniciId);
 
                 if (kullaniciZatenAtanmis)
                 {
@@ -72,27 +80,37 @@ namespace HealthHub
                 // Yeni personel ekleme
                 PERSONELLER yP = new PERSONELLER
                 {
-                    Ad = _PersonelAdi.Text,
-                    Soyad = _PersonelSoyadi.Text,
-                    PersonelGörevi = PersonelGorev.SelectedItem.ToString(),
-
+                   Ad= _PersonelAdi.Text,
+                   Soyad = _PersonelSoyadi.Text,
+                   PersonelGörevi = PersonelGorev.SelectedItem.ToString(),
                     KULLANICIID = kullaniciId
                 };
 
                 // Önce PERSONEL kaydını ekle
-                context.PERSONELLER.Add(yP);
-                context.SaveChanges(); // SaveChanges çağrısı yaparak veritabanına ekleyin
+                dpm.PERSONELLER.Add(yP);
+                dpm.SaveChanges(); // SaveChanges çağrısı yaparak veritabanına ekleyin
 
                 // PERSONELID değerini aldıktan sonra doktor ekleme
                 int personelID = yP.PERSONELID;
 
-                // Eğer personel doktor ise doktorlar tablosuna da ekle
-                if (PersonelGorev.SelectedItem.ToString() == "Doktor")
+            // Eğer personel doktor ise doktorlar tablosuna da ekle
+            if (PersonelGorev.SelectedIndex >= 0)
+            {
+                string selectedValue = PersonelGorev.SelectedItem.ToString();
+                if (selectedValue.Equals("DOKTOR", StringComparison.OrdinalIgnoreCase))
                 {
                     AddDoctor(personelID, _PersonelAdi.Text, _PersonelSoyadi.Text);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen görev seçin.");
+            }
 
-                MessageBox.Show("Personel başarıyla eklendi.");
+
+
+
+            MessageBox.Show("Personel başarıyla eklendi.");
 
                 // İlk formu güncelle ve göster
                 var form1 = Application.OpenForms.OfType<TumPersoneller>().FirstOrDefault();
@@ -102,13 +120,12 @@ namespace HealthHub
                 }
 
                 this.Close();
-            }
-
+            
         }
         private void AddDoctor(int personelID, string doktorAdi, string doktorSoyadi)
         {
-            using (var context = new HealthHubDb())
-            {
+            
+            
                 // Geçerli bir PERSONELID kontrolü
                 if (personelID <= 0)
                 {
@@ -118,19 +135,19 @@ namespace HealthHub
 
                 var yeniDoktor = new DOKTORLAR
                 {
-                    Ad = doktorAdi,
-                    Soyad = doktorSoyadi,
-                    Brans = DoktorBransi.SelectedItem.ToString(), // Branş ID yerine ismi kullanıyoruz
+                   Ad = doktorAdi,
+                   Soyad = doktorSoyadi,
+                  Brans = DoktorBransi.SelectedItem.ToString(), // Branş ID yerine ismi kullanıyoruz
                    
                     PERSONELID = personelID // Yeni eklenen personelin ID'si
                 };
 
                 // Doktoru DOKTORLAR tablosuna ekleyin
-                context.DOKTORLAR.Add(yeniDoktor);
-                context.SaveChanges();
+                dpm.DOKTORLAR.Add(yeniDoktor);
+                dpm.SaveChanges();
 
                 MessageBox.Show("Doktor başarıyla eklendi.");
-            }
+            
             //using (var context = new Hastanedb())
             //{
             //    var yeniDoktor = new DOKTORLAR
@@ -148,6 +165,7 @@ namespace HealthHub
             //    MessageBox.Show("Doktor başarıyla eklendi.");
             //}
         }
+
         private void FillComboSeachCode()
         {
             using (var context = new HealthHubDb())
@@ -161,14 +179,12 @@ namespace HealthHub
                         g.KullaniciAdi
                     }).ToList();
 
-                HangiKullanici.DataSource = kullaniciListesi;
+            HangiKullanici.DataSource = kullaniciListesi;
                 HangiKullanici.ValueMember = "KULLANICIID";
                 HangiKullanici.DisplayMember = "KullaniciAdi";
             }
-
-            //_kullanici_comboBox.Items.Clear();
-
         }
-
     }
+
+
 }

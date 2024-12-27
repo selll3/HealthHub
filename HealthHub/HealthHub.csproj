@@ -168,6 +168,7 @@
       <DependentUpon>Baslangic.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\Entity\DOKTORLAR.cs" />
+    <Compile Include="Database\Entity\DOKTOR_SAATLERI.cs" />
     <Compile Include="Database\Entity\FORMLAR.cs" />
     <Compile Include="Database\Entity\HASTALAR.cs" />
     <Compile Include="Database\Entity\HealthHubDb.cs" />
