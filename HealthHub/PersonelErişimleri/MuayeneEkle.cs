@@ -101,8 +101,19 @@ namespace HealthHub
                     Doktor.SelectedValue is int doktorID &&
                     _DoktorunSaatleri.SelectedItem is string selectedSaat)
                 {
-                    // Seçilen tarih
+                    // Seçilen tarih ve saat
                     DateTime selectedDate = dateTimePicker1.Value.Date;
+                    DateTime selectedDateTime = dateTimePicker1.Value;
+
+                    // 'formattedSaat' variable is declared here to make it accessible throughout the method
+                    string formattedSaat = selectedDateTime.ToString("HH:mm"); // Get time in "HH:mm" format
+
+                    // Geçerli tarihten önceki bir tarih seçildi mi kontrol et
+                    if (selectedDate < DateTime.Now.Date)
+                    {
+                        MessageBox.Show("Geçmiş bir tarih seçilemez. Lütfen gelecekte bir tarih seçin.");
+                        return;
+                    }
 
                     using (var context = new HealthHubDb())
                     {
@@ -112,14 +123,14 @@ namespace HealthHub
                             .Select(ds => ds.SAAT)
                             .ToList();
 
-                        if (!doktorSaatleri.Contains(selectedSaat))
+                        if (!doktorSaatleri.Contains(formattedSaat))
                         {
                             MessageBox.Show("Seçilen saat doktorun çalışma saatleri içinde değil!");
                             return;
                         }
 
                         // Seçilen saatte doktorun başka bir muayenesi var mı kontrol et
-                        DateTime selectedTarihSaat = DateTime.Parse($"{selectedDate:yyyy-MM-dd} {selectedSaat}");
+                        DateTime selectedTarihSaat = DateTime.Parse($"{selectedDate:yyyy-MM-dd} {formattedSaat}");
                         var mevcutMuayene = context.MUAYENELER
                             .FirstOrDefault(m => m.DOKTORID == doktorID && m.TarihSaat == selectedTarihSaat);
 
@@ -135,7 +146,7 @@ namespace HealthHub
                     {
                         HASTAID = hastaID,
                         DOKTORID = doktorID,
-                        TarihSaat = DateTime.Parse($"{selectedDate:yyyy-MM-dd} {selectedSaat}")
+                        TarihSaat = DateTime.Parse($"{selectedDate:yyyy-MM-dd} {formattedSaat}")
                     };
 
                     // Veritabanına kaydet
@@ -202,6 +213,11 @@ namespace HealthHub
                 MessageBox.Show("Bir doktor seçilmedi.");
             }
 
+
+        }
+
+        private void _DoktorunSaatleri_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -142,12 +142,13 @@
             this._DoktorunSaatleri.Name = "_DoktorunSaatleri";
             this._DoktorunSaatleri.Size = new System.Drawing.Size(143, 21);
             this._DoktorunSaatleri.TabIndex = 11;
+            this._DoktorunSaatleri.SelectedIndexChanged += new System.EventHandler(this._DoktorunSaatleri_SelectedIndexChanged);
             // 
             // MuayeneEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 252);
+            this.ClientSize = new System.Drawing.Size(625, 252);
             this.ControlBox = false;
             this.Controls.Add(this._DoktorunSaatleri);
             this.Controls.Add(this.label1);

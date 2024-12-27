@@ -44,7 +44,7 @@
             // 
             this.comboBoxDoktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBoxDoktor.FormattingEnabled = true;
-            this.comboBoxDoktor.Location = new System.Drawing.Point(116, 49);
+            this.comboBoxDoktor.Location = new System.Drawing.Point(116, 100);
             this.comboBoxDoktor.Name = "comboBoxDoktor";
             this.comboBoxDoktor.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDoktor.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.comboBoxHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBoxHasta.FormattingEnabled = true;
-            this.comboBoxHasta.Location = new System.Drawing.Point(116, 98);
+            this.comboBoxHasta.Location = new System.Drawing.Point(116, 54);
             this.comboBoxHasta.Name = "comboBoxHasta";
             this.comboBoxHasta.Size = new System.Drawing.Size(121, 21);
             this.comboBoxHasta.TabIndex = 1;
