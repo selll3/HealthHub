@@ -31,6 +31,7 @@ namespace HealthHub.Database.Entity
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MUAYENELER> MUAYENELER { get; set; }
+        public virtual ICollection<DOKTOR_SAATLERI> DOKTOR_SAATLERI { get; set; } = new HashSet<DOKTOR_SAATLERI>();
 
         public virtual PERSONELLER PERSONELLER { get; set; }
         //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

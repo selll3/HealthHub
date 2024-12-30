@@ -24,7 +24,17 @@ namespace HealthHub.PersonelErişimleri
 
         private void TumMuayenelercs_Load(object sender, EventArgs e)
         {
-            ListeleMuayeneler();
+            
+            
+                ListeleMuayeneler();
+
+                // DataGridView başlıklarını düzenle
+                dataGridView1.Columns["MUAYENEID"].HeaderText = "Muayene ID";
+                dataGridView1.Columns["TarihSaat"].HeaderText = "Tarih ve Saat";
+                dataGridView1.Columns["DoktorAdSoyad"].HeaderText = "Doktor Adı Soyadı";
+                dataGridView1.Columns["HastaAdSoyad"].HeaderText = "Hasta Adı Soyadı";
+            
+
         }
         private void yetkileriolustur()
         {
@@ -56,6 +66,23 @@ namespace HealthHub.PersonelErişimleri
             var muayeneler = Muayeneler.GetTumMuayenelerWithDetails();
             dataGridView1.DataSource = muayeneler; // Listeyi DataGridView'e bağla
         }
+
+        //private void AramaYap()
+        //{
+        //    string aramaTerimi = txtArama.Text.ToLower(); // Kullanıcının arama kriterini al
+        //    var muayeneler = Muayeneler.GetTumMuayenelerWithDetails();
+
+        //    // Arama kriterine göre listeyi filtrele
+        //    var filtreliMuayeneler = muayeneler.Where(muayene =>
+        //        muayene.MuayeneAdi.ToLower().Contains(aramaTerimi) ||
+        //        muayene.PacientAd.ToLower().Contains(aramaTerimi) ||
+        //        muayene.DoktorAd.ToLower().Contains(aramaTerimi)
+        //    ).ToList();
+
+        //    // Filtrelenmiş listeyi DataGridView'e bağla
+        //    dataGridView1.DataSource = filtreliMuayeneler;
+        //}
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -121,6 +148,47 @@ namespace HealthHub.PersonelErişimleri
         {
             MuayeneEkle me = new MuayeneEkle();
             me.Show();
+        }
+        public void AramaYap(string aramaTerimi)
+        {
+            try
+            {
+                using (var db = new HealthHubDb())
+                {
+                    // Arama terimini küçük harfe çevir
+                    aramaTerimi = aramaTerimi.ToLower();
+
+                    // MUAYENELER tablosundan gerekli verileri çek
+                    var filtreliMuayeneler = db.MUAYENELER
+                        .Include(m => m.DOKTORLAR)
+                        .Include(m => m.HASTALAR)
+                        .Where(m =>
+                            (m.DOKTORLAR.Ad + " " + m.DOKTORLAR.Soyad).ToLower().Contains(aramaTerimi) || // Doktor adı ve soyadı
+                            (m.HASTALAR.Ad + " " + m.HASTALAR.Soyad).ToLower().Contains(aramaTerimi) || // Hasta adı ve soyadı
+                            m.TarihSaat.ToString().Contains(aramaTerimi) // Tarih bilgisi
+                        )
+                        .Select(m => new
+                        {
+                            m.MUAYENEID,
+                            TarihSaat = m.TarihSaat,
+                            DoktorAdSoyad = m.DOKTORLAR.Ad + " " + m.DOKTORLAR.Soyad,
+                            HastaAdSoyad = m.HASTALAR.Ad + " " + m.HASTALAR.Soyad
+                        })
+                        .ToList();
+
+                    // Sonuçları DataGridView'e bağla
+                    dataGridView1.DataSource = filtreliMuayeneler;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Arama sırasında bir hata oluştu: " + ex.Message);
+            }
+        }
+
+        private void txtArama_TextChanged(object sender, EventArgs e)
+        {
+            AramaYap(txtArama.Text);
         }
     }
 }

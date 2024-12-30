@@ -11,6 +11,7 @@ namespace HealthHub.Database.Model
     public static class Doktorlar
     {
         public static HealthHubDb dbd = new HealthHubDb();
+        
         /// <summary>
         /// Database'den tüm doktorları çağırır
         /// </summary>
@@ -36,6 +37,32 @@ namespace HealthHub.Database.Model
             return doktorlarigetir;
 
         }
+
+        public static List<dynamic> GetDoktorlarVeSaatleri()
+        {
+            try
+            {
+                // Doktorları ve onların saatlerini dahil ederek çekiyoruz
+                return dbd.DOKTORLAR
+                    .Include("DOKTOR_SAATLERI") // Saat bilgilerini dahil et
+                    .Select(d => new
+                    {
+                        DoktorAdSoyad = d.Ad + " " + d.Soyad, // Doktorun Adı Soyadı
+                        Saatler = d.DOKTOR_SAATLERI.Select(s => new
+                        {
+                            Tarih = s.TARIH,
+                            Saat = s.SAAT
+                        }).ToList() // Saat listesini oluştur
+                    })
+                    .ToList<dynamic>(); // Dynamic türüne çeviriyoruz
+            }
+            catch (Exception ex)
+            {
+                // Hata durumunda boş bir liste döner
+                return new List<dynamic>();
+            }
+        }
+
 
         public static bool DoktorEkle(DOKTORLAR doktor)
         {
@@ -69,6 +96,11 @@ namespace HealthHub.Database.Model
             }
 
         }
+     
+
+
+
+
         public static bool DoktorlariSil(int selectedrowId)
         {
             try

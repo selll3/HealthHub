@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using HealthHub.Database.Entity;
 
 namespace HealthHub.Database.Model
@@ -75,20 +76,21 @@ namespace HealthHub.Database.Model
                 return new List<MUAYENELER>();
             }
         }
-        public static List<object> GetTumMuayenelerWithDetails()
+        public static List<object> GetDoktorlarVeSaatleri()
         {
             try
             {
-                // Muayeneleri, doktorları ve hastaları dahil ederek çekiyoruz
-                return dbm.MUAYENELER
-                    .Include("DOKTORLAR") // Doktor bilgilerini dahil et
-                    .Include("HASTALAR")  // Hasta bilgilerini dahil et
-                    .Select(m => new
+                // Doktorları ve onların saatlerini dahil ederek çekiyoruz
+                return dbm.DOKTORLAR
+                    .Include("DOKTOR_SAATLERI") // Saat bilgilerini dahil et
+                    .Select(d => new
                     {
-                        m.MUAYENEID,
-                        DoktorAdSoyad = m.DOKTORLAR.Ad + " " + m.DOKTORLAR.Soyad,
-                        HastaAdSoyad = m.HASTALAR.Ad + " " + m.HASTALAR.Soyad,
-                        TarihSaat = m.TarihSaat
+                        DoktorAdSoyad = d.Ad + " " + d.Soyad, // Doktorun Adı Soyadı
+                        Saatler = d.DOKTOR_SAATLERI.Select(s => new
+                        {
+                            Tarih = s.TARIH,
+                            Saat = s.SAAT
+                        }).ToList() // Saat listesini oluştur
                     })
                     .ToList<object>(); // Object türüne çeviriyoruz
             }
@@ -99,12 +101,19 @@ namespace HealthHub.Database.Model
             }
         }
 
+
         public static List<MUAYENELER> GetMuayenelerByDoktorID(int doktorID)
         {
             return dbm.MUAYENELER
                 .Where(m => m.DOKTORID == doktorID && m.TarihSaat >= DateTime.Now)
                 .ToList();
         }
+
+
+
+       
+
+
 
 
 

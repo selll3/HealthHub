@@ -38,6 +38,16 @@ namespace HealthHub.Database.Entity
             modelBuilder.Entity<TAHLILDEGERLERI>()
         .Property(e => e.Deger)
         .HasPrecision(10, 2);
+            base.OnModelCreating(modelBuilder);
+
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<DOKTORLAR>()
+         .HasMany(d => d.DOKTOR_SAATLERI)
+         .WithRequired(s => s.DOKTORLAR)
+         .HasForeignKey(s => s.DOKTORID);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
