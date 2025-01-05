@@ -97,7 +97,7 @@
             // 
             // MuayeneOlustur
             // 
-            this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.MuayeneOlustur.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.MuayeneOlustur.Location = new System.Drawing.Point(444, 168);
             this.MuayeneOlustur.Name = "MuayeneOlustur";
@@ -168,7 +168,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Doktor);
             this.Name = "MuayeneEkle";
-            this.Text = "MuayeneEkle";
+            this.Text = "Muayene Ekle";
             this.Load += new System.EventHandler(this.MuayeneEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

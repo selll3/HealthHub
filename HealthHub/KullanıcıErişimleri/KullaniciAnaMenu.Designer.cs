@@ -90,7 +90,7 @@
             // 
             // Vazgec
             // 
-            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Vazgec.Location = new System.Drawing.Point(12, 297);
             this.Vazgec.Name = "Vazgec";
@@ -114,7 +114,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "KullaniciAnaMenu";
-            this.Text = "KullaniciAnaMenu";
+            this.Text = "Kullanıcı Ana Menu";
             this.Load += new System.EventHandler(this.KullaniciAnaMenu_Load);
             this.ResumeLayout(false);
 

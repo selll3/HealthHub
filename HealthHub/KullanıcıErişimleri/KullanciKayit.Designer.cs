@@ -40,7 +40,7 @@
             // 
             // KullaniciKayit
             // 
-            this.KullaniciKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.KullaniciKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.KullaniciKayit.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.KullaniciKayit.Location = new System.Drawing.Point(283, 102);
             this.KullaniciKayit.Name = "KullaniciKayit";
@@ -132,7 +132,7 @@
             this.Controls.Add(this.Parola);
             this.Controls.Add(this.KullaniciAdi);
             this.Name = "KullanciKayit";
-            this.Text = "KullanciKayit";
+            this.Text = "Kullancı Kayıt";
             this.Load += new System.EventHandler(this.KullanciKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

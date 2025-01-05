@@ -72,7 +72,7 @@
             // 
             // KAYDET
             // 
-            this.KAYDET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.KAYDET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.KAYDET.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.KAYDET.Location = new System.Drawing.Point(452, 181);
             this.KAYDET.Name = "KAYDET";

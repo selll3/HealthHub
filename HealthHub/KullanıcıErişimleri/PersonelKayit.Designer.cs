@@ -67,7 +67,7 @@
             // 
             // kayit
             // 
-            this.kayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.kayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.kayit.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.kayit.Location = new System.Drawing.Point(234, 335);
             this.kayit.Name = "kayit";
@@ -199,7 +199,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "PersonelKayit";
-            this.Text = "PersonelKayit";
+            this.Text = "Personel Kayıt";
             this.Load += new System.EventHandler(this.PersonelKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

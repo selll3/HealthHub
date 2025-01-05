@@ -73,7 +73,7 @@
             // 
             // Giris
             // 
-            this.Giris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Giris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.Giris.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             this.Giris.Location = new System.Drawing.Point(266, 124);
             this.Giris.Name = "Giris";
@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(370, 239);
+            this.ClientSize = new System.Drawing.Size(370, 211);
             this.ControlBox = false;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Parola);
@@ -134,7 +134,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "PersonelGiris";
-            this.Text = "PersonelGiris";
+            this.Text = "Personel Giriş";
             this.Load += new System.EventHandler(this.PersonelGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

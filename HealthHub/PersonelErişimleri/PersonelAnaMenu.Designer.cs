@@ -148,7 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(288, 466);
+            this.ClientSize = new System.Drawing.Size(281, 471);
             this.ControlBox = false;
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -159,7 +159,7 @@
             this.Controls.Add(this.DoktorMuayeneleri);
             this.Controls.Add(this.Vazgec);
             this.Name = "PersonelAnaMenu";
-            this.Text = "PersonelAnaMenu";
+            this.Text = "Personel Ana Menu";
             this.Load += new System.EventHandler(this.PersonelAnaMenu_Load);
             this.ResumeLayout(false);
 
