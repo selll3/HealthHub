@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoktorMuayeneleri));
             this.Vazgec = new System.Windows.Forms.Button();
             this.DoktorMuayene = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DoktorMuayene)).BeginInit();
@@ -37,7 +38,7 @@
             // 
             // Vazgec
             // 
-            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
             this.Vazgec.Location = new System.Drawing.Point(12, 325);
             this.Vazgec.Name = "Vazgec";
@@ -62,7 +63,7 @@
             this.DoktorMuayene.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -72,6 +73,7 @@
             this.DoktorMuayene.Location = new System.Drawing.Point(12, 12);
             this.DoktorMuayene.Name = "DoktorMuayene";
             this.DoktorMuayene.ReadOnly = true;
+            this.DoktorMuayene.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DoktorMuayene.RowHeadersVisible = false;
             this.DoktorMuayene.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DoktorMuayene.Size = new System.Drawing.Size(304, 286);
@@ -83,6 +85,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(324, 378);
             this.ControlBox = false;
             this.Controls.Add(this.DoktorMuayene);

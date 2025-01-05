@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MuayeneGuncelle));
             this.comboBoxDoktor = new System.Windows.Forms.ComboBox();
             this.comboBoxHasta = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +45,7 @@
             // 
             this.comboBoxDoktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBoxDoktor.FormattingEnabled = true;
-            this.comboBoxDoktor.Location = new System.Drawing.Point(116, 100);
+            this.comboBoxDoktor.Location = new System.Drawing.Point(116, 122);
             this.comboBoxDoktor.Name = "comboBoxDoktor";
             this.comboBoxDoktor.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDoktor.TabIndex = 0;
@@ -53,7 +54,7 @@
             // 
             this.comboBoxHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBoxHasta.FormattingEnabled = true;
-            this.comboBoxHasta.Location = new System.Drawing.Point(116, 54);
+            this.comboBoxHasta.Location = new System.Drawing.Point(116, 76);
             this.comboBoxHasta.Name = "comboBoxHasta";
             this.comboBoxHasta.Size = new System.Drawing.Size(121, 21);
             this.comboBoxHasta.TabIndex = 1;
@@ -63,7 +64,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 9);
+            this.dateTimePicker1.Location = new System.Drawing.Point(116, 31);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(188, 20);
@@ -73,7 +74,7 @@
             // 
             this.KAYDET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.KAYDET.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.KAYDET.Location = new System.Drawing.Point(452, 159);
+            this.KAYDET.Location = new System.Drawing.Point(452, 181);
             this.KAYDET.Name = "KAYDET";
             this.KAYDET.Size = new System.Drawing.Size(75, 27);
             this.KAYDET.TabIndex = 3;
@@ -83,9 +84,9 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.button2.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.button2.Location = new System.Drawing.Point(6, 159);
+            this.button2.Location = new System.Drawing.Point(6, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 27);
             this.button2.TabIndex = 4;
@@ -96,8 +97,9 @@
             // Doktorlar
             // 
             this.Doktorlar.AutoSize = true;
+            this.Doktorlar.BackColor = System.Drawing.Color.Transparent;
             this.Doktorlar.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Doktorlar.Location = new System.Drawing.Point(3, 100);
+            this.Doktorlar.Location = new System.Drawing.Point(3, 122);
             this.Doktorlar.Name = "Doktorlar";
             this.Doktorlar.Size = new System.Drawing.Size(78, 18);
             this.Doktorlar.TabIndex = 8;
@@ -106,8 +108,9 @@
             // hastasecimi
             // 
             this.hastasecimi.AutoSize = true;
+            this.hastasecimi.BackColor = System.Drawing.Color.Transparent;
             this.hastasecimi.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.hastasecimi.Location = new System.Drawing.Point(3, 54);
+            this.hastasecimi.Location = new System.Drawing.Point(3, 76);
             this.hastasecimi.Name = "hastasecimi";
             this.hastasecimi.Size = new System.Drawing.Size(96, 18);
             this.hastasecimi.TabIndex = 7;
@@ -116,8 +119,9 @@
             // TarihVeSaat
             // 
             this.TarihVeSaat.AutoSize = true;
+            this.TarihVeSaat.BackColor = System.Drawing.Color.Transparent;
             this.TarihVeSaat.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.TarihVeSaat.Location = new System.Drawing.Point(3, 9);
+            this.TarihVeSaat.Location = new System.Drawing.Point(3, 31);
             this.TarihVeSaat.Name = "TarihVeSaat";
             this.TarihVeSaat.Size = new System.Drawing.Size(99, 18);
             this.TarihVeSaat.TabIndex = 6;
@@ -126,7 +130,7 @@
             // _DoktorunSaatleri
             // 
             this._DoktorunSaatleri.FormattingEnabled = true;
-            this._DoktorunSaatleri.Location = new System.Drawing.Point(427, 97);
+            this._DoktorunSaatleri.Location = new System.Drawing.Point(427, 119);
             this._DoktorunSaatleri.Name = "_DoktorunSaatleri";
             this._DoktorunSaatleri.Size = new System.Drawing.Size(118, 21);
             this._DoktorunSaatleri.TabIndex = 13;
@@ -134,8 +138,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(245, 97);
+            this.label1.Location = new System.Drawing.Point(245, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 18);
             this.label1.TabIndex = 12;
@@ -145,6 +150,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(598, 336);
             this.ControlBox = false;
             this.Controls.Add(this._DoktorunSaatleri);

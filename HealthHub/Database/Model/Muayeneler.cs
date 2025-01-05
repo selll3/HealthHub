@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthHub.Database.Entity;
 
+
+
 namespace HealthHub.Database.Model
 {
     public static class Muayeneler
@@ -76,6 +78,8 @@ namespace HealthHub.Database.Model
                 return new List<MUAYENELER>();
             }
         }
+
+   
         public static List<object> GetDoktorlarVeSaatleri()
         {
             try
@@ -98,6 +102,34 @@ namespace HealthHub.Database.Model
             {
                 // Hata durumunda boş bir liste döner
                 return new List<object>();
+            }
+        }
+        public static List<dynamic> GetMuayeneler()
+        {
+            using (var db = new HealthHubDb())
+            {
+                try
+                {
+                    // MUAYENELER tablosunu DOKTORLAR ve HASTALAR ile birleştir
+                    var muayeneler = (from m in db.MUAYENELER
+                                      join d in db.DOKTORLAR on m.DOKTORID equals d.DOKTORID
+                                      join h in db.HASTALAR on m.HASTAID equals h.HASTAID
+                                      select new
+                                      {
+                                          MUAYENEID = m.MUAYENEID, // Muayene ID
+                                          TarihSaat = m.TarihSaat, // Tarih ve Saat
+                                          DoktorAdSoyad = d.Ad + " " + d.Soyad, // Doktor Adı Soyadı
+                                          HastaAdSoyad = h.Ad + " " + h.Soyad // Hasta Adı Soyadı
+                                      }).ToList<dynamic>(); // Listeye dönüştür ve dynamic olarak döndür
+
+                    return muayeneler;
+                }
+                catch (Exception ex)
+                {
+                    // Hata durumunda boş bir liste döndür
+                    Console.WriteLine("Hata: " + ex.Message);
+                    return new List<dynamic>();
+                }
             }
         }
 

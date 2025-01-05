@@ -42,26 +42,39 @@ namespace HealthHub.Database.Model
         {
             try
             {
-                // Doktorları ve onların saatlerini dahil ederek çekiyoruz
-                return dbd.DOKTORLAR
-                    .Include("DOKTOR_SAATLERI") // Saat bilgilerini dahil et
-                    .Select(d => new
-                    {
-                        DoktorAdSoyad = d.Ad + " " + d.Soyad, // Doktorun Adı Soyadı
-                        Saatler = d.DOKTOR_SAATLERI.Select(s => new
+                using (var db = new HealthHubDb())
+                {
+                    // Doktorlar ve saatleri JOIN kullanarak alıyoruz
+                    var doktorlarSaatler = (from d in db.DOKTORLAR
+                                            join ds in db.DOKTOR_SAATLERI on d.DOKTORID equals ds.DOKTORID
+                                            select new
+                                            {
+                                                DoktorAdSoyad = d.Ad + " " + d.Soyad,  // Doktor adı soyadı
+                                                Saat = ds.SAAT // TimeSpan'ı saat:dakika formatına dönüştürme
+     // Saat formatında döndür
+                                            }).ToList();
+
+                    // Saatleri gruplayıp, her doktor için saatleri birleştiriyoruz
+                    var doktorlarGruplanmisSaatler = doktorlarSaatler
+                        .GroupBy(d => d.DoktorAdSoyad)
+                        .Select(g => new
                         {
-                            Tarih = s.TARIH,
-                            Saat = s.SAAT
-                        }).ToList() // Saat listesini oluştur
-                    })
-                    .ToList<dynamic>(); // Dynamic türüne çeviriyoruz
+                            DoktorAdSoyad = g.Key,
+                            Saatler = string.Join(", ", g.Select(s => s.Saat))  // Saatleri virgülle ayırarak birleştir
+                        })
+                        .ToList<dynamic>();
+
+                    return doktorlarGruplanmisSaatler;
+                }
             }
             catch (Exception ex)
             {
                 // Hata durumunda boş bir liste döner
+                Console.WriteLine("Hata: " + ex.Message);
                 return new List<dynamic>();
             }
         }
+
 
 
         public static bool DoktorEkle(DOKTORLAR doktor)

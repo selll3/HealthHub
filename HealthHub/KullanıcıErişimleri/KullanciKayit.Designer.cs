@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullanciKayit));
             this.KullaniciKayit = new System.Windows.Forms.Button();
             this.ParolaKayit = new System.Windows.Forms.TextBox();
             this.KullaniciAdiKayit = new System.Windows.Forms.TextBox();
@@ -40,10 +41,10 @@
             // KullaniciKayit
             // 
             this.KullaniciKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.KullaniciKayit.Font = new System.Drawing.Font("Showcard Gothic", 9F);
-            this.KullaniciKayit.Location = new System.Drawing.Point(2, 82);
+            this.KullaniciKayit.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.KullaniciKayit.Location = new System.Drawing.Point(283, 102);
             this.KullaniciKayit.Name = "KullaniciKayit";
-            this.KullaniciKayit.Size = new System.Drawing.Size(75, 23);
+            this.KullaniciKayit.Size = new System.Drawing.Size(75, 29);
             this.KullaniciKayit.TabIndex = 9;
             this.KullaniciKayit.Text = "KAYIT OL";
             this.KullaniciKayit.UseVisualStyleBackColor = false;
@@ -53,7 +54,7 @@
             // 
             this.ParolaKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.ParolaKayit.Font = new System.Drawing.Font("Lucida Bright", 9F);
-            this.ParolaKayit.Location = new System.Drawing.Point(105, 40);
+            this.ParolaKayit.Location = new System.Drawing.Point(112, 57);
             this.ParolaKayit.Name = "ParolaKayit";
             this.ParolaKayit.PasswordChar = '#';
             this.ParolaKayit.Size = new System.Drawing.Size(133, 22);
@@ -63,7 +64,7 @@
             // 
             this.KullaniciAdiKayit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.KullaniciAdiKayit.Font = new System.Drawing.Font("Lucida Bright", 9F);
-            this.KullaniciAdiKayit.Location = new System.Drawing.Point(105, 6);
+            this.KullaniciAdiKayit.Location = new System.Drawing.Point(112, 23);
             this.KullaniciAdiKayit.Name = "KullaniciAdiKayit";
             this.KullaniciAdiKayit.Size = new System.Drawing.Size(133, 22);
             this.KullaniciAdiKayit.TabIndex = 7;
@@ -71,8 +72,9 @@
             // Parola
             // 
             this.Parola.AutoSize = true;
+            this.Parola.BackColor = System.Drawing.Color.Transparent;
             this.Parola.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Parola.Location = new System.Drawing.Point(-1, 40);
+            this.Parola.Location = new System.Drawing.Point(6, 57);
             this.Parola.Name = "Parola";
             this.Parola.Size = new System.Drawing.Size(57, 18);
             this.Parola.TabIndex = 6;
@@ -81,8 +83,9 @@
             // KullaniciAdi
             // 
             this.KullaniciAdi.AutoSize = true;
+            this.KullaniciAdi.BackColor = System.Drawing.Color.Transparent;
             this.KullaniciAdi.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.KullaniciAdi.Location = new System.Drawing.Point(-1, 9);
+            this.KullaniciAdi.Location = new System.Drawing.Point(6, 26);
             this.KullaniciAdi.Name = "KullaniciAdi";
             this.KullaniciAdi.Size = new System.Drawing.Size(98, 18);
             this.KullaniciAdi.TabIndex = 5;
@@ -90,11 +93,11 @@
             // 
             // Vazgec
             // 
-            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Vazgec.Font = new System.Drawing.Font("Showcard Gothic", 9F);
-            this.Vazgec.Location = new System.Drawing.Point(277, 82);
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Vazgec.Location = new System.Drawing.Point(9, 102);
             this.Vazgec.Name = "Vazgec";
-            this.Vazgec.Size = new System.Drawing.Size(78, 22);
+            this.Vazgec.Size = new System.Drawing.Size(78, 29);
             this.Vazgec.TabIndex = 10;
             this.Vazgec.Text = "VAZGEÇ";
             this.Vazgec.UseVisualStyleBackColor = false;
@@ -103,9 +106,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(243, 43);
+            this.checkBox1.Location = new System.Drawing.Point(250, 60);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(108, 22);
             this.checkBox1.TabIndex = 11;
@@ -117,7 +120,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 128);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(409, 218);
             this.ControlBox = false;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Vazgec);

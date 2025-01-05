@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciAnaMenu));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(77, 53);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 32);
             this.button1.TabIndex = 0;
@@ -53,7 +54,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(12, 68);
+            this.button2.Location = new System.Drawing.Point(77, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 32);
             this.button2.TabIndex = 1;
@@ -66,7 +67,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(12, 178);
+            this.button3.Location = new System.Drawing.Point(77, 219);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 34);
             this.button3.TabIndex = 2;
@@ -79,7 +80,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(12, 124);
+            this.button4.Location = new System.Drawing.Point(77, 165);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(156, 32);
             this.button4.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Vazgec.Location = new System.Drawing.Point(12, 256);
+            this.Vazgec.Location = new System.Drawing.Point(12, 297);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 28);
             this.Vazgec.TabIndex = 10;
@@ -103,7 +104,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(206, 308);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(318, 386);
             this.ControlBox = false;
             this.Controls.Add(this.Vazgec);
             this.Controls.Add(this.button4);

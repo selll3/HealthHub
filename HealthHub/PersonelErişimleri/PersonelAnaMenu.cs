@@ -53,6 +53,9 @@ namespace HealthHub.PersonelErişimleri
                     case 1006:
                         _KullaniciIslemleri.Enabled = true;
                         break;
+                    case 1012:
+                        button4.Enabled = true;
+                        break;
 
 
 
@@ -62,7 +65,7 @@ namespace HealthHub.PersonelErişimleri
         private void button_MouseEnter(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.BackColor = Color.FromArgb(255, 228, 255); // Hover efekti
+            btn.BackColor = Color.FromArgb(212, 213, 194); // Hover efekti
         }
 
         private void button_MouseLeave(object sender, EventArgs e)
@@ -90,7 +93,10 @@ namespace HealthHub.PersonelErişimleri
             _KullaniciIslemleri.MouseEnter += button_MouseEnter;
             _KullaniciIslemleri.MouseLeave += button_MouseLeave;
 
-           
+            button4.MouseEnter += button_MouseEnter;
+            button4.MouseLeave += button_MouseLeave;
+
+
         }
 
         private void Vazgec_Click(object sender, EventArgs e)
@@ -142,6 +148,12 @@ namespace HealthHub.PersonelErişimleri
             TumHastalar th = new TumHastalar(currentUserId);
             th.Show();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Doktorlar d = new Doktorlar();
+            d.Show();   
         }
     }
 }

@@ -82,5 +82,10 @@ namespace HealthHub.PersonelErişimleri
                 Parola.PasswordChar = '*'; // Şifreyi tekrar gizle
             }
         }
+
+        private void Parola_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

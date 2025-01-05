@@ -63,26 +63,11 @@ namespace HealthHub.PersonelErişimleri
         }
         private void ListeleMuayeneler()
         {
-            var muayeneler = Muayeneler.GetTumMuayenelerWithDetails();
+            var muayeneler = Muayeneler.GetMuayeneler();
             dataGridView1.DataSource = muayeneler; // Listeyi DataGridView'e bağla
         }
 
-        //private void AramaYap()
-        //{
-        //    string aramaTerimi = txtArama.Text.ToLower(); // Kullanıcının arama kriterini al
-        //    var muayeneler = Muayeneler.GetTumMuayenelerWithDetails();
-
-        //    // Arama kriterine göre listeyi filtrele
-        //    var filtreliMuayeneler = muayeneler.Where(muayene =>
-        //        muayene.MuayeneAdi.ToLower().Contains(aramaTerimi) ||
-        //        muayene.PacientAd.ToLower().Contains(aramaTerimi) ||
-        //        muayene.DoktorAd.ToLower().Contains(aramaTerimi)
-        //    ).ToList();
-
-        //    // Filtrelenmiş listeyi DataGridView'e bağla
-        //    dataGridView1.DataSource = filtreliMuayeneler;
-        //}
-
+      
 
         private void button1_Click(object sender, EventArgs e)
         {

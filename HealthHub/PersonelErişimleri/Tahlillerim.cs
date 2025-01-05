@@ -55,7 +55,10 @@ namespace HealthHub
         private void Tahlillerim_Load(object sender, EventArgs e)
         {
             FillComboSearchHasta();
-         
+            // Hem otomatik genişleme hem de kullanıcıya manuel genişletme izni:
+            _Tahliller.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            _Tahliller.AllowUserToResizeColumns = true;
+
 
         }
 

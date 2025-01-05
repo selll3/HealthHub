@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TahlilGiris));
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,9 +48,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(320, 285);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            this.button1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(329, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 31);
             this.button1.TabIndex = 16;
@@ -62,7 +63,7 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBox1.Font = new System.Drawing.Font("Lucida Bright", 9F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 12);
+            this.comboBox1.Location = new System.Drawing.Point(119, 17);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 23;
@@ -70,8 +71,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(1, 15);
+            this.label4.Location = new System.Drawing.Point(9, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 24;
@@ -80,8 +82,8 @@
             // Kaydet
             // 
             this.Kaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Kaydet.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Kaydet.Location = new System.Drawing.Point(433, 285);
+            this.Kaydet.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Kaydet.Location = new System.Drawing.Point(441, 331);
             this.Kaydet.Name = "Kaydet";
             this.Kaydet.Size = new System.Drawing.Size(91, 31);
             this.Kaydet.TabIndex = 34;
@@ -96,7 +98,7 @@
             this.tahililismicombo.FormattingEnabled = true;
             this.tahililismicombo.Items.AddRange(new object[] {
             "Kan Tahlili"});
-            this.tahililismicombo.Location = new System.Drawing.Point(111, 75);
+            this.tahililismicombo.Location = new System.Drawing.Point(119, 80);
             this.tahililismicombo.Name = "tahililismicombo";
             this.tahililismicombo.Size = new System.Drawing.Size(121, 23);
             this.tahililismicombo.TabIndex = 35;
@@ -112,7 +114,7 @@
             "PLT",
             "Hct",
             "Kolesterol"});
-            this.parametreadicombo.Location = new System.Drawing.Point(111, 141);
+            this.parametreadicombo.Location = new System.Drawing.Point(119, 146);
             this.parametreadicombo.Name = "parametreadicombo";
             this.parametreadicombo.Size = new System.Drawing.Size(121, 23);
             this.parametreadicombo.TabIndex = 36;
@@ -121,7 +123,7 @@
             // 
             this.degercombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.degercombo.Font = new System.Drawing.Font("Lucida Bright", 9F);
-            this.degercombo.Location = new System.Drawing.Point(111, 198);
+            this.degercombo.Location = new System.Drawing.Point(119, 203);
             this.degercombo.Name = "degercombo";
             this.degercombo.Size = new System.Drawing.Size(121, 22);
             this.degercombo.TabIndex = 37;
@@ -129,8 +131,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(1, 75);
+            this.label1.Location = new System.Drawing.Point(9, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 18);
             this.label1.TabIndex = 38;
@@ -139,8 +142,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1, 146);
+            this.label2.Location = new System.Drawing.Point(9, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 18);
             this.label2.TabIndex = 39;
@@ -149,8 +153,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(1, 200);
+            this.label3.Location = new System.Drawing.Point(9, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 40;
@@ -162,7 +167,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Stencil", 9.75F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -171,14 +176,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            this.dataGridView1.Location = new System.Drawing.Point(250, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(258, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -190,8 +195,8 @@
             // EKLE
             // 
             this.EKLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.EKLE.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Bold);
-            this.EKLE.Location = new System.Drawing.Point(157, 252);
+            this.EKLE.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.EKLE.Location = new System.Drawing.Point(165, 257);
             this.EKLE.Name = "EKLE";
             this.EKLE.Size = new System.Drawing.Size(75, 27);
             this.EKLE.TabIndex = 42;
@@ -203,7 +208,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 358);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(646, 410);
             this.ControlBox = false;
             this.Controls.Add(this.EKLE);
             this.Controls.Add(this.dataGridView1);

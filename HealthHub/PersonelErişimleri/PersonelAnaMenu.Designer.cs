@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelAnaMenu));
             this.Vazgec = new System.Windows.Forms.Button();
             this.DoktorMuayeneleri = new System.Windows.Forms.Button();
             this.Hastalar = new System.Windows.Forms.Button();
@@ -35,15 +36,16 @@
             this._KullaniciIslemleri = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Vazgec
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Vazgec.Location = new System.Drawing.Point(12, 319);
+            this.Vazgec.Location = new System.Drawing.Point(3, 415);
             this.Vazgec.Name = "Vazgec";
-            this.Vazgec.Size = new System.Drawing.Size(78, 31);
+            this.Vazgec.Size = new System.Drawing.Size(78, 24);
             this.Vazgec.TabIndex = 9;
             this.Vazgec.Text = "VAZGEÇ";
             this.Vazgec.UseVisualStyleBackColor = false;
@@ -54,7 +56,7 @@
             this.DoktorMuayeneleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.DoktorMuayeneleri.Enabled = false;
             this.DoktorMuayeneleri.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.DoktorMuayeneleri.Location = new System.Drawing.Point(12, 12);
+            this.DoktorMuayeneleri.Location = new System.Drawing.Point(27, 56);
             this.DoktorMuayeneleri.Name = "DoktorMuayeneleri";
             this.DoktorMuayeneleri.Size = new System.Drawing.Size(235, 28);
             this.DoktorMuayeneleri.TabIndex = 10;
@@ -67,7 +69,7 @@
             this.Hastalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.Hastalar.Enabled = false;
             this.Hastalar.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Hastalar.Location = new System.Drawing.Point(12, 105);
+            this.Hastalar.Location = new System.Drawing.Point(27, 149);
             this.Hastalar.Name = "Hastalar";
             this.Hastalar.Size = new System.Drawing.Size(235, 28);
             this.Hastalar.TabIndex = 11;
@@ -80,7 +82,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(12, 201);
+            this.button3.Location = new System.Drawing.Point(27, 245);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(235, 28);
             this.button3.TabIndex = 12;
@@ -93,7 +95,7 @@
             this._KullaniciIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this._KullaniciIslemleri.Enabled = false;
             this._KullaniciIslemleri.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this._KullaniciIslemleri.Location = new System.Drawing.Point(12, 256);
+            this._KullaniciIslemleri.Location = new System.Drawing.Point(27, 352);
             this._KullaniciIslemleri.Name = "_KullaniciIslemleri";
             this._KullaniciIslemleri.Size = new System.Drawing.Size(235, 27);
             this._KullaniciIslemleri.TabIndex = 13;
@@ -106,7 +108,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 56);
+            this.button1.Location = new System.Drawing.Point(27, 100);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(235, 28);
             this.button1.TabIndex = 14;
@@ -119,7 +121,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(9, 155);
+            this.button2.Location = new System.Drawing.Point(24, 199);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(238, 28);
             this.button2.TabIndex = 15;
@@ -127,12 +129,28 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
+            this.button4.Enabled = false;
+            this.button4.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(27, 299);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(235, 27);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Doktorlar";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // PersonelAnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 422);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(288, 466);
             this.ControlBox = false;
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this._KullaniciIslemleri);
@@ -156,5 +174,6 @@
         private System.Windows.Forms.Button _KullaniciIslemleri;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
     }
 }

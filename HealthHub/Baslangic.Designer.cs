@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baslangic));
             this.PersonelGiris = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PersonelGiris
             // 
-            this.PersonelGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
+            this.PersonelGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.PersonelGiris.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.PersonelGiris.Location = new System.Drawing.Point(23, 94);
+            this.PersonelGiris.Location = new System.Drawing.Point(79, 155);
             this.PersonelGiris.Name = "PersonelGiris";
             this.PersonelGiris.Size = new System.Drawing.Size(191, 33);
             this.PersonelGiris.TabIndex = 1;
@@ -47,7 +48,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 241);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(357, 355);
             this.Controls.Add(this.PersonelGiris);
             this.Name = "Baslangic";
             this.Text = "Baslangic";

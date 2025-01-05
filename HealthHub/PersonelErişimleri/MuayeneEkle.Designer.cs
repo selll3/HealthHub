@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MuayeneEkle));
             this.Doktor = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.TarihVeSaat = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@
             // 
             this.Doktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.Doktor.FormattingEnabled = true;
-            this.Doktor.Location = new System.Drawing.Point(125, 103);
+            this.Doktor.Location = new System.Drawing.Point(124, 121);
             this.Doktor.Name = "Doktor";
             this.Doktor.Size = new System.Drawing.Size(121, 21);
             this.Doktor.TabIndex = 0;
@@ -55,7 +56,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(124, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
@@ -64,8 +65,9 @@
             // TarihVeSaat
             // 
             this.TarihVeSaat.AutoSize = true;
+            this.TarihVeSaat.BackColor = System.Drawing.Color.Transparent;
             this.TarihVeSaat.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.TarihVeSaat.Location = new System.Drawing.Point(6, 9);
+            this.TarihVeSaat.Location = new System.Drawing.Point(5, 27);
             this.TarihVeSaat.Name = "TarihVeSaat";
             this.TarihVeSaat.Size = new System.Drawing.Size(99, 18);
             this.TarihVeSaat.TabIndex = 3;
@@ -74,8 +76,9 @@
             // hastasecimi
             // 
             this.hastasecimi.AutoSize = true;
+            this.hastasecimi.BackColor = System.Drawing.Color.Transparent;
             this.hastasecimi.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.hastasecimi.Location = new System.Drawing.Point(6, 55);
+            this.hastasecimi.Location = new System.Drawing.Point(5, 73);
             this.hastasecimi.Name = "hastasecimi";
             this.hastasecimi.Size = new System.Drawing.Size(96, 18);
             this.hastasecimi.TabIndex = 4;
@@ -84,8 +87,9 @@
             // Doktorlar
             // 
             this.Doktorlar.AutoSize = true;
+            this.Doktorlar.BackColor = System.Drawing.Color.Transparent;
             this.Doktorlar.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Doktorlar.Location = new System.Drawing.Point(6, 108);
+            this.Doktorlar.Location = new System.Drawing.Point(5, 126);
             this.Doktorlar.Name = "Doktorlar";
             this.Doktorlar.Size = new System.Drawing.Size(78, 18);
             this.Doktorlar.TabIndex = 5;
@@ -95,7 +99,7 @@
             // 
             this.MuayeneOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.MuayeneOlustur.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.MuayeneOlustur.Location = new System.Drawing.Point(445, 150);
+            this.MuayeneOlustur.Location = new System.Drawing.Point(444, 168);
             this.MuayeneOlustur.Name = "MuayeneOlustur";
             this.MuayeneOlustur.Size = new System.Drawing.Size(156, 28);
             this.MuayeneOlustur.TabIndex = 6;
@@ -105,9 +109,9 @@
             // 
             // Vazgec
             // 
-            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.Vazgec.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Vazgec.Location = new System.Drawing.Point(9, 150);
+            this.Vazgec.Location = new System.Drawing.Point(8, 168);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 28);
             this.Vazgec.TabIndex = 7;
@@ -119,7 +123,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 53);
+            this.comboBox1.Location = new System.Drawing.Point(124, 71);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
@@ -128,8 +132,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(276, 108);
+            this.label1.Location = new System.Drawing.Point(275, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 18);
             this.label1.TabIndex = 10;
@@ -138,7 +143,7 @@
             // _DoktorunSaatleri
             // 
             this._DoktorunSaatleri.FormattingEnabled = true;
-            this._DoktorunSaatleri.Location = new System.Drawing.Point(458, 108);
+            this._DoktorunSaatleri.Location = new System.Drawing.Point(457, 126);
             this._DoktorunSaatleri.Name = "_DoktorunSaatleri";
             this._DoktorunSaatleri.Size = new System.Drawing.Size(143, 21);
             this._DoktorunSaatleri.TabIndex = 11;
@@ -148,7 +153,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 252);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(625, 322);
             this.ControlBox = false;
             this.Controls.Add(this._DoktorunSaatleri);
             this.Controls.Add(this.label1);

@@ -13,9 +13,11 @@ namespace HealthHub.PersonelErişimleri
 {
     public partial class Doktorlar : Form
     {
+      
         public Doktorlar()
         {
             InitializeComponent();
+            
         }
 
         private void Vazgec_Click(object sender, EventArgs e)
@@ -33,15 +35,40 @@ namespace HealthHub.PersonelErişimleri
         }
 
         private void Doktorlar_Load(object sender, EventArgs e)
-        {
-            // Doktorlar ve saatleri yükle
-            var doktorlarSaatler = HealthHub.Database.Model.Doktorlar.GetDoktorlarVeSaatleri();
-            Doktor.DataSource = doktorlarSaatler;
+        {// Hem otomatik genişleme hem de kullanıcıya manuel genişletme izni:
+           
+            
 
-            // DataGridView sütun başlıklarını ayarla
-           Doktor.Columns["DoktorAdSoyad"].HeaderText = "Doktor Adı Soyadı";
-            Doktor.Columns["Saatler"].HeaderText = "Saatler";
+            try
+            {
+                // AutoGenerateColumns özelliğini kapat
+                Doktor.AutoGenerateColumns = false;
+
+                // Sütunları manuel olarak tanımla
+                Doktor.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "DoktorAdSoyad",
+                    HeaderText = "Doktor Adı Soyadı",
+                    DataPropertyName = "DoktorAdSoyad"
+                });
+
+                Doktor.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Saatler",
+                    HeaderText = "Saatler",
+                    DataPropertyName = "Saatler"
+                });
+
+                // Doktorlar ve saatleri yükle
+                var doktorlarSaatler = HealthHub.Database.Model.Doktorlar.GetDoktorlarVeSaatleri();
+                Doktor.DataSource = doktorlarSaatler;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
         }
+
 
         private void txtFiltre_TextChanged(object sender, EventArgs e)
         {
@@ -56,6 +83,11 @@ namespace HealthHub.PersonelErişimleri
 
            Doktor.DataSource = filtreliSonuc;
 
+
+        }
+
+        private void Doktor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
