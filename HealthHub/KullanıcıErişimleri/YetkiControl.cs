@@ -78,7 +78,7 @@ namespace HealthHub.KullanıcıErişimleri
 
         private void YetkiControl_Load(object sender, EventArgs e)
         {
-            LoadYetkiler();
+            LoadYetkiler();//
         }
 
         private void YetkiKontrol_CellContentClick(object sender, DataGridViewCellEventArgs e)
