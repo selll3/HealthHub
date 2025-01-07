@@ -36,6 +36,9 @@
             this._ad = new System.Windows.Forms.TextBox();
             this._soyad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +76,7 @@
             // textBoxTC
             // 
             this.textBoxTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            this.textBoxTC.Location = new System.Drawing.Point(12, 12);
+            this.textBoxTC.Location = new System.Drawing.Point(81, 11);
             this.textBoxTC.Name = "textBoxTC";
             this.textBoxTC.ReadOnly = true;
             this.textBoxTC.Size = new System.Drawing.Size(163, 20);
@@ -82,7 +85,7 @@
             // _ad
             // 
             this._ad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            this._ad.Location = new System.Drawing.Point(12, 48);
+            this._ad.Location = new System.Drawing.Point(81, 53);
             this._ad.Name = "_ad";
             this._ad.ReadOnly = true;
             this._ad.Size = new System.Drawing.Size(163, 20);
@@ -91,7 +94,7 @@
             // _soyad
             // 
             this._soyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
-            this._soyad.Location = new System.Drawing.Point(12, 88);
+            this._soyad.Location = new System.Drawing.Point(81, 89);
             this._soyad.Name = "_soyad";
             this._soyad.ReadOnly = true;
             this._soyad.Size = new System.Drawing.Size(163, 20);
@@ -109,6 +112,39 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "TC :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label2.Location = new System.Drawing.Point(12, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Ad :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Soyad :";
+            // 
             // DMuayeneleriAyrinti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +153,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(331, 353);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this._soyad);
             this.Controls.Add(this._ad);
@@ -138,5 +177,8 @@
         private System.Windows.Forms.TextBox _ad;
         private System.Windows.Forms.TextBox _soyad;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
