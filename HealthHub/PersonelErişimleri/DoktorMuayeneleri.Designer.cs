@@ -33,6 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoktorMuayeneleri));
             this.Vazgec = new System.Windows.Forms.Button();
             this.DoktorMuayene = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DoktorMuayene)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +42,7 @@
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.Vazgec.Location = new System.Drawing.Point(12, 325);
+            this.Vazgec.Location = new System.Drawing.Point(12, 357);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 29);
             this.Vazgec.TabIndex = 9;
@@ -70,7 +72,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DoktorMuayene.DefaultCellStyle = dataGridViewCellStyle2;
             this.DoktorMuayene.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
-            this.DoktorMuayene.Location = new System.Drawing.Point(12, 12);
+            this.DoktorMuayene.Location = new System.Drawing.Point(12, 52);
             this.DoktorMuayene.Name = "DoktorMuayene";
             this.DoktorMuayene.ReadOnly = true;
             this.DoktorMuayene.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -81,14 +83,34 @@
             this.DoktorMuayene.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoktorMuayene_CellContentClick);
             this.DoktorMuayene.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoktorMuayene_CellDoubleClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Stencil", 9.75F);
+            this.label1.Location = new System.Drawing.Point(133, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Ara :";
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Location = new System.Drawing.Point(178, 17);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(138, 20);
+            this.TxtSearch.TabIndex = 15;
+            // 
             // DoktorMuayeneleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(324, 378);
+            this.ClientSize = new System.Drawing.Size(346, 398);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.DoktorMuayene);
             this.Controls.Add(this.Vazgec);
             this.Name = "DoktorMuayeneleri";
@@ -96,6 +118,7 @@
             this.Load += new System.EventHandler(this.DoktorMuayeneleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DoktorMuayene)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -103,5 +126,7 @@
 
         private System.Windows.Forms.Button Vazgec;
         private System.Windows.Forms.DataGridView DoktorMuayene;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtSearch;
     }
 }

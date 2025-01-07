@@ -11,6 +11,8 @@ namespace HealthHub.Database.Model
     public static class Hastalar
     {
         public static HealthHubDb dbh = new HealthHubDb();
+        
+
         public static List<dynamic> HastalariGetir()
         {
 
