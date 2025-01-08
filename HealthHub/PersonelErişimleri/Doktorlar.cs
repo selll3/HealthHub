@@ -42,8 +42,13 @@ namespace HealthHub.PersonelErişimleri
             try
             {
                 // AutoGenerateColumns özelliğini kapat
+                Doktor.ScrollBars = ScrollBars.Both;
                 Doktor.AutoGenerateColumns = false;
+                Doktor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+                Doktor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+                // Form boyutlandırılabilir olsun
+                this.FormBorderStyle = FormBorderStyle.Sizable;
                 // Sütunları manuel olarak tanımla
                 Doktor.Columns.Add(new DataGridViewTextBoxColumn
                 {
