@@ -36,7 +36,7 @@
             // 
             this.PersonelGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.PersonelGiris.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.PersonelGiris.Location = new System.Drawing.Point(141, 223);
+            this.PersonelGiris.Location = new System.Drawing.Point(141, 207);
             this.PersonelGiris.Name = "PersonelGiris";
             this.PersonelGiris.Size = new System.Drawing.Size(191, 33);
             this.PersonelGiris.TabIndex = 1;
@@ -50,10 +50,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(473, 507);
+            this.ClientSize = new System.Drawing.Size(481, 338);
             this.Controls.Add(this.PersonelGiris);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Baslangic";
             this.Text = "Baslangic";
+            this.Load += new System.EventHandler(this.Baslangic_Load);
             this.ResumeLayout(false);
 
         }

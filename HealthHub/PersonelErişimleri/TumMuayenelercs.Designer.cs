@@ -63,7 +63,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
-            this.dataGridView1.Location = new System.Drawing.Point(12, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -76,7 +76,7 @@
             // 
             this.vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.vazgec.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.vazgec.Location = new System.Drawing.Point(12, 348);
+            this.vazgec.Location = new System.Drawing.Point(39, 362);
             this.vazgec.Name = "vazgec";
             this.vazgec.Size = new System.Drawing.Size(75, 34);
             this.vazgec.TabIndex = 1;
@@ -89,7 +89,7 @@
             this.GUNCELLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.GUNCELLE.Enabled = false;
             this.GUNCELLE.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.GUNCELLE.Location = new System.Drawing.Point(124, 348);
+            this.GUNCELLE.Location = new System.Drawing.Point(151, 362);
             this.GUNCELLE.Name = "GUNCELLE";
             this.GUNCELLE.Size = new System.Drawing.Size(89, 34);
             this.GUNCELLE.TabIndex = 2;
@@ -102,7 +102,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkGray;
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(255, 348);
+            this.button1.Location = new System.Drawing.Point(282, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.EKLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.EKLE.Enabled = false;
             this.EKLE.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.EKLE.Location = new System.Drawing.Point(370, 348);
+            this.EKLE.Location = new System.Drawing.Point(397, 362);
             this.EKLE.Name = "EKLE";
             this.EKLE.Size = new System.Drawing.Size(75, 34);
             this.EKLE.TabIndex = 4;
@@ -125,7 +125,7 @@
             // 
             // txtArama
             // 
-            this.txtArama.Location = new System.Drawing.Point(255, 25);
+            this.txtArama.Location = new System.Drawing.Point(282, 39);
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(190, 20);
             this.txtArama.TabIndex = 6;
@@ -136,7 +136,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.label1.Location = new System.Drawing.Point(198, 29);
+            this.label1.Location = new System.Drawing.Point(225, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 14;
@@ -148,7 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(479, 469);
+            this.ClientSize = new System.Drawing.Size(517, 460);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtArama);
@@ -157,6 +157,7 @@
             this.Controls.Add(this.GUNCELLE);
             this.Controls.Add(this.vazgec);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TumMuayenelercs";
             this.Text = "Muayeneler";
             this.Load += new System.EventHandler(this.TumMuayenelercs_Load);

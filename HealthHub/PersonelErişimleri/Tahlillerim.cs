@@ -56,8 +56,10 @@ namespace HealthHub
         {
             FillComboSearchHasta();
             // Hem otomatik genişleme hem de kullanıcıya manuel genişletme izni:
-            _Tahliller.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            _Tahliller.AllowUserToResizeColumns = true;
+          _Tahliller.RowHeadersVisible = false;
+            _Tahliller.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            _Tahliller.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
 
 
         }

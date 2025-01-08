@@ -40,7 +40,7 @@
             // 
             this.Vazgec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.Vazgec.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.Vazgec.Location = new System.Drawing.Point(12, 347);
+            this.Vazgec.Location = new System.Drawing.Point(37, 359);
             this.Vazgec.Name = "Vazgec";
             this.Vazgec.Size = new System.Drawing.Size(78, 30);
             this.Vazgec.TabIndex = 9;
@@ -70,12 +70,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Hasta.DefaultCellStyle = dataGridViewCellStyle2;
             this.Hasta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
-            this.Hasta.Location = new System.Drawing.Point(12, 12);
+            this.Hasta.Location = new System.Drawing.Point(37, 24);
             this.Hasta.Name = "Hasta";
             this.Hasta.ReadOnly = true;
             this.Hasta.RowHeadersVisible = false;
             this.Hasta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Hasta.Size = new System.Drawing.Size(370, 307);
+            this.Hasta.Size = new System.Drawing.Size(424, 307);
             this.Hasta.TabIndex = 10;
             this.Hasta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Hasta_CellContentClick);
             // 
@@ -85,10 +85,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(400, 390);
+            this.ClientSize = new System.Drawing.Size(511, 425);
             this.ControlBox = false;
             this.Controls.Add(this.Hasta);
             this.Controls.Add(this.Vazgec);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TumHastalar";
             this.Text = "Hastalar";
             this.Load += new System.EventHandler(this.TumHastalar_Load);

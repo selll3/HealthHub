@@ -105,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(469, 313);
+            this.ClientSize = new System.Drawing.Size(503, 342);
             this.ControlBox = false;
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this._Tahliller);

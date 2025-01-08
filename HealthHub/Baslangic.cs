@@ -29,5 +29,10 @@ namespace HealthHub
             PersonelGiris personel = new PersonelGiris();
             personel.Show();
         }
+
+        private void Baslangic_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,7 +42,7 @@
             // 
             this.Parola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.Parola.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parola.Location = new System.Drawing.Point(195, 90);
+            this.Parola.Location = new System.Drawing.Point(176, 83);
             this.Parola.Name = "Parola";
             this.Parola.PasswordChar = '*';
             this.Parola.Size = new System.Drawing.Size(138, 22);
@@ -53,7 +53,7 @@
             // 
             this.KullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
             this.KullaniciAdi.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KullaniciAdi.Location = new System.Drawing.Point(195, 52);
+            this.KullaniciAdi.Location = new System.Drawing.Point(176, 45);
             this.KullaniciAdi.Name = "KullaniciAdi";
             this.KullaniciAdi.Size = new System.Drawing.Size(138, 22);
             this.KullaniciAdi.TabIndex = 16;
@@ -62,7 +62,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(211)))), ((int)(((byte)(221)))));
             this.button1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 210);
+            this.button1.Location = new System.Drawing.Point(36, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 32);
             this.button1.TabIndex = 15;
@@ -75,9 +75,9 @@
             // 
             this.Giris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.Giris.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Giris.Location = new System.Drawing.Point(403, 210);
+            this.Giris.Location = new System.Drawing.Point(372, 207);
             this.Giris.Name = "Giris";
-            this.Giris.Size = new System.Drawing.Size(92, 32);
+            this.Giris.Size = new System.Drawing.Size(95, 32);
             this.Giris.TabIndex = 14;
             this.Giris.Text = "GİRİŞ YAP";
             this.Giris.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(95, 97);
+            this.label2.Location = new System.Drawing.Point(76, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 13;
@@ -99,7 +99,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(95, 55);
+            this.label1.Location = new System.Drawing.Point(76, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 18);
             this.label1.TabIndex = 12;
@@ -110,7 +110,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(339, 92);
+            this.checkBox1.Location = new System.Drawing.Point(320, 85);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(108, 22);
             this.checkBox1.TabIndex = 18;
@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(513, 269);
+            this.ClientSize = new System.Drawing.Size(513, 292);
             this.ControlBox = false;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Parola);
@@ -133,6 +133,7 @@
             this.Controls.Add(this.Giris);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PersonelGiris";
             this.Text = "Personel Giriş";
             this.Load += new System.EventHandler(this.PersonelGiris_Load);
