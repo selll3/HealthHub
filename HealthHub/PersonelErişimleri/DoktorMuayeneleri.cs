@@ -28,6 +28,11 @@ namespace HealthHub.PersonelErişimleri
         private void DoktorMuayeneleri_Load(object sender, EventArgs e)
         {
             DoktorMuayene.RowHeadersVisible = false;
+            DoktorMuayene.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DoktorMuayene.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Form boyutlandırılabilir olsun
+            this.FormBorderStyle = FormBorderStyle.Sizable;
 
             // Giriş yapan kullanıcının KULLANICIID'sini al
             int kullaniciID = kullaniciId;
@@ -48,18 +53,22 @@ namespace HealthHub.PersonelErişimleri
             DoktorMuayene.DataSource = muayeneler.Select(m => new
             {
                 m.MUAYENEID,
-                m.HASTAID,
-                m.DOKTORID,
-                m.TarihSaat
+                HASTAID = m.HASTAID, // Gizli sütun
+                HastaAdSoyad = $"{m.HASTALAR.Ad} {m.HASTALAR.Soyad}", // Ad Soyad sütunu
+                DoktorAdSoyad = $"{m.DOKTORLAR.Ad} {m.DOKTORLAR.Soyad}",
+                TarihSaat = m.TarihSaat
             }).ToList();
+
+            // HASTAID sütununu gizle
+            DoktorMuayene.Columns["HASTAID"].Visible = false;
         }
+
         private List<Database.Entity.MUAYENELER> GetGelecekMuayeneler(int doktorID)
         {
             return Database.Model.Muayeneler.dbm.MUAYENELER
                 .Where(m => m.DOKTORID == doktorID && m.TarihSaat >= DateTime.Now)
                 .ToList();
         }
-
 
         private void DoktorMuayeneleriniListele()
         {
@@ -80,8 +89,8 @@ namespace HealthHub.PersonelErişimleri
                             DoktorMuayene.DataSource = muayeneler.Select(m => new
                             {
                                 MuayeneID = m.MUAYENEID,
-                                HastaID = m.HASTAID,
-                                DoktorID = m.DOKTORID,
+                                HastaAdSoyad = $"{m.HASTALAR.Ad} {m.HASTALAR.Soyad}",
+                                DoktorAdSoyad = $"{m.DOKTORLAR.Ad} {m.DOKTORLAR.Soyad}",
                                 TarihSaat = m.TarihSaat
                             }).ToList();
                         }
@@ -113,17 +122,15 @@ namespace HealthHub.PersonelErişimleri
             // Filtreleme işlemi
             var filteredMuayeneler = Database.Model.Muayeneler.GetMuayenelerByDoktorID(GetDoctorIDByPersonelID(GetPersonelIDByKullaniciID(kullaniciId)))
                 .Where(m =>
+                    $"{m.HASTALAR.Ad} {m.HASTALAR.Soyad}".ToLower().Contains(searchTerm) ||
                     m.MUAYENEID.ToString().Contains(searchTerm) ||
-                    m.HASTAID.ToString().Contains(searchTerm) ||
-                              m.TarihSaat.HasValue && m.TarihSaat.Value.ToString("yyyy-MM-dd").Contains(searchTerm)
-
-)
-
+                    m.TarihSaat.HasValue && m.TarihSaat.Value.ToString("yyyy-MM-dd").Contains(searchTerm)
+                )
                 .Select(m => new
                 {
                     MuayeneID = m.MUAYENEID,
-                    HastaID = m.HASTAID,
-                    DoktorID = m.DOKTORID,
+                    HastaAdSoyad = $"{m.HASTALAR.Ad} {m.HASTALAR.Soyad}",
+                    DoktorAdSoyad = $"{m.DOKTORLAR.Ad} {m.DOKTORLAR.Soyad}",
                     TarihSaat = m.TarihSaat
                 })
                 .ToList();
@@ -138,19 +145,7 @@ namespace HealthHub.PersonelErişimleri
                 .Select(p => p.PERSONELID)
                 .FirstOrDefault();
         }
-        private void Vazgec_Click(object sender, EventArgs e)
-        {
-            foreach (Control control in this.Controls)
-            {
-                if (control is TextBox)
-                {
-                    control.Text = string.Empty;
-                }
-            }
 
-            // Formu kapat
-            this.Close();
-        }
         private int GetDoctorIDByPersonelID(int personelID)
         {
             string personelGorev = Database.Model.Personeller.dp.PERSONELLER
@@ -172,19 +167,37 @@ namespace HealthHub.PersonelErişimleri
         {
             if (e.RowIndex >= 0)
             {
-                int hastaID = Convert.ToInt32(DoktorMuayene.Rows[e.RowIndex].Cells["HastaID"].Value);
+                // HASTAID sütunundan veriyi al
+                int hastaID = Convert.ToInt32(DoktorMuayene.Rows[e.RowIndex].Cells["HASTAID"].Value);
+
+                // Hasta detay formunu aç
                 DMuayeneleriAyrinti hastaForm = new DMuayeneleriAyrinti(hastaID);
                 hastaForm.ShowDialog();
             }
         }
-    
+
+        private void Vazgec_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = string.Empty;
+                }
+            }
+
+            // Formu kapat
+            this.Close();
+        }
 
 
-private void DoktorMuayene_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DoktorMuayene_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // İçerik tıklama işlemleri buraya eklenebilir
         }
-
-        
     }
 }
+
+
+
+
