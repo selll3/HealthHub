@@ -74,7 +74,7 @@
             // 
             this.KAYDET.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(200)))), ((int)(((byte)(155)))));
             this.KAYDET.Font = new System.Drawing.Font("Stencil", 9.75F);
-            this.KAYDET.Location = new System.Drawing.Point(470, 181);
+            this.KAYDET.Location = new System.Drawing.Point(485, 181);
             this.KAYDET.Name = "KAYDET";
             this.KAYDET.Size = new System.Drawing.Size(75, 27);
             this.KAYDET.TabIndex = 3;
@@ -130,7 +130,7 @@
             // _DoktorunSaatleri
             // 
             this._DoktorunSaatleri.FormattingEnabled = true;
-            this._DoktorunSaatleri.Location = new System.Drawing.Point(427, 119);
+            this._DoktorunSaatleri.Location = new System.Drawing.Point(442, 122);
             this._DoktorunSaatleri.Name = "_DoktorunSaatleri";
             this._DoktorunSaatleri.Size = new System.Drawing.Size(118, 21);
             this._DoktorunSaatleri.TabIndex = 13;
@@ -140,7 +140,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(245, 119);
+            this.label1.Location = new System.Drawing.Point(260, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 18);
             this.label1.TabIndex = 12;
@@ -164,6 +164,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBoxHasta);
             this.Controls.Add(this.comboBoxDoktor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MuayeneGuncelle";
             this.Text = "                               ";
             this.Load += new System.EventHandler(this.MuayeneGuncelle_Load);

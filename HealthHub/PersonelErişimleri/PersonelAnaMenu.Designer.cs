@@ -158,6 +158,7 @@
             this.Controls.Add(this.Hastalar);
             this.Controls.Add(this.DoktorMuayeneleri);
             this.Controls.Add(this.Vazgec);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PersonelAnaMenu";
             this.Text = "Personel Ana Menu";
             this.Load += new System.EventHandler(this.PersonelAnaMenu_Load);

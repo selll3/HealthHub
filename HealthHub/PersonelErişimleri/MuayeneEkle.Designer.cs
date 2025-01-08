@@ -167,6 +167,7 @@
             this.Controls.Add(this.TarihVeSaat);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Doktor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MuayeneEkle";
             this.Text = "Muayene Ekle";
             this.Load += new System.EventHandler(this.MuayeneEkle_Load);
